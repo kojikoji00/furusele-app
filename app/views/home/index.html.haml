@@ -5,33 +5,48 @@
     ふるさとセレクト
 
 .income
-  年収を入れてね
-.family
-  家族構成
-.deduction
-  控除額
+  あなたの情報を入れてね
+  = form_with url: 'root_path' do |f|
+    -# = collection_select(:template, :name, templates, :id, :name, {:include_blank => true})
+    -# = form.text_area :body, :size => "40x10"
+    .form-group
+      = f.label :income, '年収'
+      = f.select :incom, {'300万円': 1, '350万円': 2, '400万円': 3, '450万円': 4, '500万円': 5, '550万円': 6, '600万円': 7, '650万円': 8, '700万円': 9, '750万円': 10, '800万円': 11, '850万円': 12, '900万円': 13, '950万円': 14, '1000万円': 15, '1200万円': 16, '1400万円': 17, '1600万円': 18}, { include_blank: '選択してください'}, { class: 'form-control' , required: true }
+      = f.label :family, '家族構成'
+      = f.select :family, {'独身': 1, '既婚': 2}, { include_blank: '選択してください'}, { class: 'form-control' , required: true }
+      = f.label :family, '扶養家族'
+      = f.select :family, {'いる': 1, 'いない': 2}, { include_blank: '選択してください'}, { class: 'form-control' , required: true }
 
 .category
+  カテゴリー
   .category_first
-    1番
+    = form_with url: 'root_path' do |f|
+      = f.label :category, '1番'
+      = f.select :category, {'肉': 1, '魚介': 2, '米・パン': 3, '果物・フルーツ': 4, '野菜': 5, '酒・アルコール': 6, '飲料・ドリンク': 7, 'お菓子・スイーツ': 8, '惣菜・加工品': 9, '調味料': 10, '旅行券・チケット': 11, '雑貨・日用品': 12, '花・観葉植物': 13, '定期便': 13}, { include_blank: '選択してください'}, { class: 'select' , required: true }
   .category_second
-    2番
+    = form_with url: 'root_path' do |f|
+      = f.label :category, '2番'
+      = f.select :category, {'肉': 1, '魚介': 2, '米・パン': 3, '果物・フルーツ': 4, '野菜': 5, '酒・アルコール': 6, '飲料・ドリンク': 7, 'お菓子・スイーツ': 8, '惣菜・加工品': 9, '調味料': 10, '旅行券・チケット': 11, '雑貨・日用品': 12, '花・観葉植物': 13, '定期便': 13}, { include_blank: '選択してください'}, { class: 'select' , required: true }
   .category_third
-    3番
+    = form_with url: 'root_path' do |f|
+      = f.label :category, '3番'
+      = f.select :category, {'肉': 1, '魚介': 2, '米・パン': 3, '果物・フルーツ': 4, '野菜': 5, '酒・アルコール': 6, '飲料・ドリンク': 7, 'お菓子・スイーツ': 8, '惣菜・加工品': 9, '調味料': 10, '旅行券・チケット': 11, '雑貨・日用品': 12, '花・観葉植物': 13, '定期便': 13}, { include_blank: '選択してください'}, { class: 'select' , required: true }
 
 
 .select
   .select_category
     .select_category_first
       .select_category_first_image
-        = image_tag 'article1.png'
-          = link_to
+        = link_to home_path do
+          = image_tag 'article1.png'
       .select_category_first_name
     .select_category_second
       .select_category_second_image
-        = image_tag 'article1.png'
+        = link_to home_path do
+          = image_tag 'article1.png'
       .select_category_second_name
     .select_category_third
       .select_category_third_image
-        = image_tag 'article1.png'
+        = link_to home_path do
+          = image_tag 'article1.png'
       .select_category_third_name
