@@ -1,0 +1,41 @@
+.header {
+  &_top {
+    font-size: 10px;
+    background-color: black;
+    color: white;
+    .inner{
+      margin: 0 30px;
+      text-align: center;
+    }
+  }
+  &_main {
+    float: left;
+    font-size: 50px;
+    .inner{
+      margin: 0 30px;
+    }
+  }
+  &_explanation {
+    float: right;
+
+  }
+}
+
+.personal {
+  clear: both;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.category {
+  margin-top: 100px;
+}
+
+.select {
+  &_category {
+    margin-top: 100px;
+    img{
+      width: 96px;
+    }
+  }
+}

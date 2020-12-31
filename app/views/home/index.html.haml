@@ -1,24 +1,27 @@
 .header
-  .header_title
-    ふるセレ
-  .header_subtitle
-    ふるさとセレクト
+  .header_top
+    .inner
+      ふるさとセレクト
+  .header_main
+    .inner
+      ふるセレ
+  .header_explanation
+    = link_to 'ふるさと納税とは', home_path
 
-.income
-  あなたの情報を入れてね
-  = form_with url: 'root_path' do |f|
-    -# = collection_select(:template, :name, templates, :id, :name, {:include_blank => true})
-    -# = form.text_area :body, :size => "40x10"
-    .form-group
-      = f.label :income, '年収'
-      = f.select :incom, {'300万円': 1, '350万円': 2, '400万円': 3, '450万円': 4, '500万円': 5, '550万円': 6, '600万円': 7, '650万円': 8, '700万円': 9, '750万円': 10, '800万円': 11, '850万円': 12, '900万円': 13, '950万円': 14, '1000万円': 15, '1200万円': 16, '1400万円': 17, '1600万円': 18}, { include_blank: '選択してください'}, { class: 'form-control' , required: true }
-      = f.label :family, '家族構成'
-      = f.select :family, {'独身': 1, '既婚': 2}, { include_blank: '選択してください'}, { class: 'form-control' , required: true }
-      = f.label :family, '扶養家族'
-      = f.select :family, {'いる': 1, 'いない': 2}, { include_blank: '選択してください'}, { class: 'form-control' , required: true }
+.personal
+  .income
+    あなたの情報を入れてください
+    = form_with url: 'root_path' do |f|
+      .form-group
+        = f.label :income, '年収'
+        = f.select :incom, {'300万円': 1, '350万円': 2, '400万円': 3, '450万円': 4, '500万円': 5, '550万円': 6, '600万円': 7, '650万円': 8, '700万円': 9, '750万円': 10, '800万円': 11, '850万円': 12, '900万円': 13, '950万円': 14, '1000万円': 15, '1200万円': 16, '1400万円': 17, '1600万円': 18}, { include_blank: '選択してください'}, { class: 'form-control' , required: true }
+        = f.label :family, '家族構成'
+        = f.select :family, {'独身': 1, '既婚': 2}, { include_blank: '選択してください'}, { class: 'form-control' , required: true }
+        = f.label :family, '扶養家族'
+        = f.select :family, {'いる': 1, 'いない': 2}, { include_blank: '選択してください'}, { class: 'form-control' , required: true }
 
 .category
-  カテゴリー
+  カテゴリーを１〜３つ選択してください
   .category_first
     = form_with url: 'root_path' do |f|
       = f.label :category, '1番'
@@ -35,18 +38,18 @@
 
 .select
   .select_category
-    .select_category_first
-      .select_category_first_image
-        = link_to home_path do
-          = image_tag 'article1.png'
-      .select_category_first_name
-    .select_category_second
-      .select_category_second_image
-        = link_to home_path do
-          = image_tag 'article1.png'
-      .select_category_second_name
-    .select_category_third
-      .select_category_third_image
-        = link_to home_path do
-          = image_tag 'article1.png'
-      .select_category_third_name
+    .select_category_image
+      = image_tag 'article1.png'
+    .select_category_name
+      aaaaaaaa
+    .select_category_image
+      = link_to home_path do
+        = image_tag 'article1.png'
+      .select_category_name
+        bbbbbbbb
+    .select_category_image
+      = image_tag 'article1.png'
+    .select_category_name
+      ccccccccccc
+
+  = javascript_pack_tag 'top'
