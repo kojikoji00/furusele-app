@@ -6,7 +6,7 @@
     .inner
       ふるセレ
   .header_explanation
-    = link_to 'ふるさと納税とは', home_path
+    = link_to 'ふるさと納税とは', select_path
 
 .personal
   .income
@@ -43,7 +43,7 @@
     .select_category_name
       aaaaaaaa
     .select_category_image
-      = link_to home_path do
+      = link_to select_path do
         = image_tag 'article1.png'
       .select_category_name
         bbbbbbbb
@@ -52,4 +52,4 @@
     .select_category_name
       ccccccccccc
 
-  = javascript_pack_tag 'top'
+= javascript_pack_tag 'top'
