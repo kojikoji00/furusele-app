@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.5'
+ruby '2.6.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'pg', '>= 0.18', '< 2.0'
@@ -29,6 +29,9 @@ gem 'better_errors'
 gem 'binding_of_caller'
 gem 'faker'
 gem 'hamlit'
+# gem 'mechanize'
+gem 'activerecord-import'
+gem 'nokogiri'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
