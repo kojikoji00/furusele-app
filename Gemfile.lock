@@ -50,6 +50,8 @@ GEM
     activerecord (6.0.3.4)
       activemodel (= 6.0.3.4)
       activesupport (= 6.0.3.4)
+    activerecord-import (1.0.7)
+      activerecord (>= 3.2)
     activestorage (6.0.3.4)
       actionpack (= 6.0.3.4)
       activejob (= 6.0.3.4)
@@ -313,6 +315,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
+  activerecord-import
   annotate
   aws-sdk-s3
   better_errors
@@ -327,6 +330,7 @@ DEPENDENCIES
   hamlit
   jbuilder (~> 2.7)
   listen (~> 3.2)
+  nokogiri
   pg (>= 0.18, < 2.0)
   pry-byebug
   puma (~> 4.1)

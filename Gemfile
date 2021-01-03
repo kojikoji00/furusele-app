@@ -29,6 +29,9 @@ gem 'better_errors'
 gem 'binding_of_caller'
 gem 'faker'
 gem 'hamlit'
+# gem 'mechanize'
+gem 'activerecord-import'
+gem 'nokogiri'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
