@@ -5,31 +5,27 @@
     あなたの情報を入れてください
     = form_with url: 'root_path' do |f|
       .form-group
-        = f.label :income, '年収'
-        = f.select :incom, {'300万円': 1, '350万円': 2, '400万円': 3, '450万円': 4, '500万円': 5, '550万円': 6, '600万円': 7, '650万円': 8, '700万円': 9, '750万円': 10, '800万円': 11, '850万円': 12, '900万円': 13, '950万円': 14, '1000万円': 15, '1200万円': 16, '1400万円': 17, '1600万円': 18}, { include_blank: '選択してください'}, { class: 'form-control' , required: true }
-        = f.label :family, '家族構成'
-        = f.select :family, {'独身': 1, '既婚': 2}, { include_blank: '選択してください'}, { class: 'form-control' , required: true }
-        = f.label :family, '扶養家族'
-        = f.select :family, {'いる': 1, 'いない': 2}, { include_blank: '選択してください'}, { class: 'form-control' , required: true }
+        .form-group_incom
+          = f.label :incom, '年収'
+          = f.select :incom, {'300万円': 1, '350万円': 2, '400万円': 3, '450万円': 4, '500万円': 5, '550万円': 6, '600万円': 7, '650万円': 8, '700万円': 9, '750万円': 10, '800万円': 11, '850万円': 12, '900万円': 13, '950万円': 14, '1000万円': 15, '1200万円': 16, '1400万円': 17, '1600万円': 18}, { include_blank: '選択してください'}, { class: 'form-control' , required: true }
+        .form-group_family
+          = f.label :family, '家族構成'
+          = f.select :family, {'独身': 1, '既婚・共働き(配偶者控除無し)': 2, '既婚（配偶者控除有り）': 3,  '既婚・共働き（配偶者控除無し）＋子1人（高校生）': 4, '既婚・共働き（配偶者控除無し）＋子1人（大学生）': 5, '既婚（配偶者控除有り）': 6, '既婚・共働き（配偶者控除無し）＋子2人（大学生と高校生）': 7, '既婚（配偶者控除有り）＋子2人（大学生と高校生）': 8}, { include_blank: '選択してください'}, { class: 'form-control' , required: true }
+      .deduction.hidden
+        あなたの控除額は〇〇○円です。
 
 .category
   カテゴリーを１〜３つ選択してください
   .category_first
-    = form_with url: 'root_path' do |f|
-      = f.label :category, '1番'
-      = f.select :category, {'肉': 1, '魚介': 2, '米・パン': 3, '果物・フルーツ': 4, '野菜': 5, '酒・アルコール': 6, '飲料・ドリンク': 7, 'お菓子・スイーツ': 8, '惣菜・加工品': 9, '調味料': 10, '旅行券・チケット': 11, '雑貨・日用品': 12, '花・観葉植物': 13, '定期便': 13}, { include_blank: '選択してください'}, { class: 'select' , required: true }
+    = render 'category'
   .category_second
-    = form_with url: 'root_path' do |f|
-      = f.label :category, '2番'
-      = f.select :category, {'肉': 1, '魚介': 2, '米・パン': 3, '果物・フルーツ': 4, '野菜': 5, '酒・アルコール': 6, '飲料・ドリンク': 7, 'お菓子・スイーツ': 8, '惣菜・加工品': 9, '調味料': 10, '旅行券・チケット': 11, '雑貨・日用品': 12, '花・観葉植物': 13, '定期便': 13}, { include_blank: '選択してください'}, { class: 'select' , required: true }
+    = render 'category'
   .category_third
-    = form_with url: 'root_path' do |f|
-      = f.label :category, '3番'
-      = f.select :category, {'肉': 1, '魚介': 2, '米・パン': 3, '果物・フルーツ': 4, '野菜': 5, '酒・アルコール': 6, '飲料・ドリンク': 7, 'お菓子・スイーツ': 8, '惣菜・加工品': 9, '調味料': 10, '旅行券・チケット': 11, '雑貨・日用品': 12, '花・観葉植物': 13, '定期便': 13}, { include_blank: '選択してください'}, { class: 'select' , required: true }
-
+    = render 'category'
 
 .select
   .select_category
+    .select_category_title.first
     .select_category_image
       = image_tag 'article1.png'
     .select_category_name
@@ -39,9 +35,19 @@
         = image_tag 'article1.png'
       .select_category_name
         bbbbbbbb
+    .select_category_title.second
     .select_category_image
       = image_tag 'article1.png'
     .select_category_name
       ccccccccccc
+    .select_category_image
+      = image_tag 'article1.png'
+    .select_category_name
+      dddddddddd
+    .select_category_title.third
+    .select_category_image
+      = image_tag 'article1.png'
+    .select_category_name
+      eeeeeeeeeee
 
 = javascript_pack_tag 'top'
