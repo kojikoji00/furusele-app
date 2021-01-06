@@ -1,34 +1,78 @@
+= render 'header'
 
-.container
-  .title
-    〜ふるさと納税とは〜
-  .content
-    任意の地方自治体に対して寄付が行える制度です。
-    ふるさと納税の寄附金は税金の還付・控除が受けられます。
-    手続きをすると、最終的な実質負担額2,000円のみとなります。
-    さらにお礼品として、自治体から特産品や宿泊券がもらえる制度です。
+.explanation
+  .explanation-title
+    %h3 〜ふるさと納税とは〜
 
-.container
-  .title
-    〜何が良いのか〜
-  .content
-    １.様々な地域に寄付ができる
-    ご自身の出身地に限らず全国の自治体に寄付ができる！
-    ２.寄付の使い道が選べる
-    まちづくりや復興支援など使い道を指定できる自治体も！
-    ３.お礼品がもらえる
-    応援した地域の特産品などが届く
+  .explanation-content
+    %i.fas.fa-user-graduate.fa-4x
+    %p
+      任意の地方自治体に対して寄付が行える制度です。
+      %br/
+      ふるさと納税の寄附金は税金の還付・控除が受けられます。
+      %br/
+      手続きをすると、最終的な実質負担額2,000円のみとなります。
+      %br/
+      さらにお礼品として、自治体から特産品や宿泊券がもらえる制度です。
 
-.container
-  .title
-    〜ステップ〜
-  .content
-    .step1
-    ステップ１
-    控除上限額を調べる
-    .step2
-    ステップ２
-    自治体に寄付する
-    .step3
-    ステップ３
-    控除手続きをする
+.charm
+  .charm-title
+    %h3 〜何が良いのか〜
+  .charm-content
+    %ul
+      %li.charm-content-item
+        .charm-content-item-num
+          %p １
+        .charm-content-item-title
+          %p 様々な地域に寄付ができる
+        .charm-content-item-text
+          %p 
+            ご自身の出身地に限らず
+            %br/
+            全国の自治体に寄付ができる！
+      %li.charm-content-item
+        .charm-content-item-num
+          %p ２
+        .charm-content-item-title
+          %p 寄付の使い道が選べる
+        .charm-content-item-text
+          %p
+            まちづくりや復興支援など
+            %br/
+            使い道を指定できる自治体も！
+      %li.charm-content-item
+        .charm-content-item-num
+          %p ３
+        .charm-content-item-title
+          %p お礼品がもらえる
+        .charm-content-item-text
+          %p
+          応援した地域の
+          %br/
+          特産品などが届く
+
+.step
+  .step-title
+    %h3 〜ステップ〜
+  .step-content
+    %ul
+      %li.step-content-item
+        .step-content-item-num
+          %p ステップ１
+        .step-content-item-title
+          %p 控除上限額を調べる
+      %li.step-content-item
+        .step-content-item-num
+          %p ステップ２
+        .step-content-item-title
+          %p 
+            自治体に寄付する
+            %br/
+            （ふるさと納税対象商品を
+            %br/
+            購入する）
+      %li.step-content-item
+        .step-content-item-num
+          %p ステップ３
+        .step-content-item-title
+          %p 控除手続きをする

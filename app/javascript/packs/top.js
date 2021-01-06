@@ -2,24 +2,24 @@
 // import axios from 'modules/axios'
 
 document.addEventListener('DOMContentLoaded', () => {
-  $('.form-group').on('change',() => {
+  $('.personal-form-group').on('change',() => {
     $('.deduction').removeClass('hidden')
   })
 
-  $('.category_first').on('change',() => {
-    $('.select_category_title.first').append(
-      `<div class='select_category_title_first'><p>${'.category_first'}</p></div>`
+  $('.category-select-first').on('change',() => {
+    $('.result-category-title-first').append(
+      `<div class='select_category_title_first'><h3>カテゴリー１：${'.category-select-first'}</h3></div>`
     )
   })
 
-  $('.category_second').on('change',() => {
-    $('.select_category_title.second').append(
-      `<div class='select_category_title_second'><p>${'.category_second'}</p></div>`
+  $('.category-select-second').on('change',() => {
+    $('.result-category-title-second').append(
+      `<div class='select_category_title_second'><h3>カテゴリー２：${'.category-select-second'}</h3></div>`
     )
   })
-  $('.category_third').on('change',() => {
-    $('.select_category_title.third').append(
-      `<div class='select_category_title_third'><p>${'.category_third'}</p></div>`
+  $('.category-select-third').on('change',() => {
+    $('.result-category-title-third').append(
+      `<div class='select_category_title_third'><h3>カテゴリー３：${'.category-select-third'}</h3></div>`
     )
   })
 })
