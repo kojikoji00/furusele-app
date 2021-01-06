@@ -1,4 +1,13 @@
+label{
+  font-size: 20px;
+}
+select{
+  font-size: 20px;
+}
+
 .header {
+  margin-bottom: 100px;
+  font: poppins;
   &_top {
     font-size: 10px;
     background-color: black;
@@ -9,6 +18,8 @@
     }
   }
   &_main {
+    margin-top: 20px;
+    margin-bottom: 20px;
     float: left;
     font-size: 50px;
     .inner{
@@ -21,26 +32,51 @@
   &_explanation {
     float: right;
     text-align: center;
+    margin:20px;
     img {
       width: 30px;
     }
     a {
       text-decoration: none;
+      font-size: 10px;
     }
   }
 }
 
 .personal {
+  margin: 0 30px;
   clear: both;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  border: 3px solid #9db100;
+  &-title{
+    background-color: #9db100;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+  }
+  &-form-group {
+    padding: 36px 20px;
+    background: #ffffdf;
+    font-size: 20px;
+  }
 }
 
 .category {
-  margin-top: 100px;
+  margin: 50px 30px;
+  clear: both;
+  border: 3px solid #9db100;
+  &-title{
+    background-color: #9db100;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+  }
+  select {
+    margin: 5px;
+  }
 }
 
 .result {
+  margin: 0 30px;
   margin-top: 100px;
   h3 {
     font-size: 25px;
@@ -53,9 +89,49 @@
   }
   &-category {
     margin-top: 100px;
+    &-title {
+      margin-top: 10px;
+    }
     &-image{
+      margin-top: 20px;
       img{
         width: 150px;
+      }
+      margin-bottom: 10px;
+    &-comment {
+      margin-bottom: 20px;
+    }
+    }
+  }
+}
+
+.footer {
+  margin: 20px;
+  margin-top: 50px;
+  .link {
+    &-twitter{
+      float: left;
+      text-align: center;
+    }
+    ul{
+      float: right;
+      li{
+        margin: 10px;
+        img{
+          height: 45px;
+        }
+        h1{
+          font-size: 34px;
+          a {
+            text-decoration: none;
+          }
+        }
+        p {
+          font-size: 12px;
+          a {
+            text-decoration: none;
+          }
+        }
       }
     }
   }

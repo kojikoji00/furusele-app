@@ -16,6 +16,11 @@
  *= require_self
  */
 
- .hidden {
-   display: none;
- }
+ * {
+  margin: 0px;
+  padding: 0px;
+}
+
+.hidden {
+  display: none;
+}

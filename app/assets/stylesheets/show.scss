@@ -3,14 +3,12 @@ ul{
   list-style: none;
   display: flex;
   justify-content: space-between;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
 }
 
 .explanation {
-  margin-top: 100px;
   clear: both;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+  
   &-title{
     background-color: #9a5a24;
     h3{
@@ -18,6 +16,14 @@ ul{
       margin: 0 20px;
       font-size: 20px;
     }
+  }
+  i {
+    margin:20px;
+    margin-top: 20px;
+  }
+  p {
+    margin:20px;
+    margin-top: 20px;
   }
 }
 
@@ -40,6 +46,7 @@ ul{
       height: 228px;
       p{
         text-align:center;
+        margin-bottom:20px;
       }
       &-num{
         color: #995a29;
@@ -76,10 +83,12 @@ ul{
       height: 228px;
       p{
         text-align:center;
+        margin-bottom:20px;
       }
       &-num{
         color: #995a29;
         font-size: 26px;
+        margin-top: 20px;
       }
       &-title{
         font-size: 14px;

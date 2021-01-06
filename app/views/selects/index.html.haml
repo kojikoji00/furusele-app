@@ -3,18 +3,18 @@
 .personal
   .personal-title
     %h3 あなたの情報を入力してください
-    .form-group
-      = form_with url: 'root_path' do |f|
-        .form-group-income
-          %i.fas.fa-money-check
-          = f.label :income, '年収'
-          = f.select :income, {'300万円': 1, '350万円': 2, '400万円': 3, '450万円': 4, '500万円': 5, '550万円': 6, '600万円': 7, '650万円': 8, '700万円': 9, '750万円': 10, '800万円': 11, '850万円': 12, '900万円': 13, '950万円': 14, '1000万円': 15, '1200万円': 16, '1400万円': 17, '1600万円': 18}, { include_blank: '選択してください'}, { class: 'form-control' , required: true }
-        .form-group-family
-        %i.fas.fa-house-user
-          = f.label :family, '家族構成'
-          = f.select :family, {'独身': 1, '既婚・共働き(配偶者控除無し)': 2, '既婚（配偶者控除有り）': 3,  '既婚・共働き（配偶者控除無し）＋子1人（高校生）': 4, '既婚・共働き（配偶者控除無し）＋子1人（大学生）': 5, '既婚（配偶者控除有り）': 6, '既婚・共働き（配偶者控除無し）＋子2人（大学生と高校生）': 7, '既婚（配偶者控除有り）＋子2人（大学生と高校生）': 8}, { include_blank: '選択してください'}, { class: 'form-control' , required: true }
-      .deduction.hidden
-        %p あなたの控除額は{計算結果}円です。
+  .personal-form-group
+    = form_with url: 'root_path' do |f|
+      .personal-form-group-income
+        %i.fas.fa-money-check
+        = f.label :income, '年収　　'
+        = f.select :income, {'300万円': 1, '350万円': 2, '400万円': 3, '450万円': 4, '500万円': 5, '550万円': 6, '600万円': 7, '650万円': 8, '700万円': 9, '750万円': 10, '800万円': 11, '850万円': 12, '900万円': 13, '950万円': 14, '1000万円': 15, '1200万円': 16, '1400万円': 17, '1600万円': 18}, { include_blank: '選択してください'}, { class: 'form-control' , required: true }
+      .personal-form-group-family
+      %i.fas.fa-house-user
+        = f.label :family, '家族構成'
+        = f.select :family, {'独身': 1, '既婚・共働き(配偶者控除無し)': 2, '既婚（配偶者控除有り）': 3,  '既婚・共働き（配偶者控除無し）＋子1人（高校生）': 4, '既婚・共働き（配偶者控除無し）＋子1人（大学生）': 5, '既婚（配偶者控除有り）': 6, '既婚・共働き（配偶者控除無し）＋子2人（大学生と高校生）': 7, '既婚（配偶者控除有り）＋子2人（大学生と高校生）': 8}, { include_blank: '選択してください'}, { class: 'form-control' , required: true }
+    .deduction.hidden
+      %p あなたの控除額は{計算結果}円です。
 
 .category
   .category-title
@@ -29,70 +29,85 @@
 .result
   .result-title
     %h3 結果
-  .result-first-category-title
-    %h3 カテゴリー１
+  .result-category-title-first
+  %ul
+    %li.result-category-image
+      = image_tag 'hotate.webp'
+      .result-category-name
+        %h4 オホーツク産ホタテ冷大
+      .result-category-city
+        %p 北海道紋別市
+      .result-category-amount
+        %p 寄付金額　20,000円
+      .result-category-comment
+        %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
+
+    %li.result-category-image
+      = image_tag 'hotate.webp'
+      .result-category-name
+        %h4 オホーツク産ホタテ冷大
+      .result-category-city
+        %p 北海道紋別市
+      .result-category-amount
+        %p 寄付金額　20,000円
+      .result-category-comment
+        %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
+
+  .result-category-title-second
+  %ul
+    %li.result-category-image
+      = image_tag 'hotate.webp'
+      .result-category-name
+        %h4 オホーツク産ホタテ冷大
+      .result-category-city
+        %p 北海道紋別市
+      .result-category-amount
+        %p 寄付金額　20,000円
+      .result-category-comment
+        %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
+        
+    %li.result-category-image
+      = image_tag 'hotate.webp'
+      .result-category-name
+        %h4 オホーツク産ホタテ冷大
+      .result-category-city
+        %p 北海道紋別市
+      .result-category-amount
+        %p 寄付金額　20,000円
+      .result-category-comment
+        %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
+
+  .result-category-title-third
+  -# %h3 カテゴリー３
+  %ul
+    %li.result-category-image
+      = image_tag 'hotate.webp'
+      .result-category-name
+        %h4 オホーツク産ホタテ冷大
+      .result-category-city
+        %p 北海道紋別市
+      .result-category-amount
+        %p 寄付金額　20,000円
+      .result-category-comment
+        %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
+
+.footer
+  .link
+    .link-twitter
+      %i.fab.fa-twitter-square.fa-3x
+      %p 共有しよう！
     %ul
-      %li.result-category-image
-        = image_tag 'article1.png'
-        .result-category-name
-          %h4 オホーツク産ホタテ冷大
-        .result-category-city
-          %p 北海道紋別市
-        .result-category-amount
-          %p 寄付金額　20,000円
-        .result-category-comment
-          %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
+      %li
+        = link_to 'https://www.satofull.jp/' do
+          .link-title
+            %h1 さ
+          .link-comment
+            %p さとふる
+      %li
+        = link_to 'https://event.rakuten.co.jp/furusato/' do
+          .link-image
+            = image_tag 'rakuten.png'
+          .link-comment
+            %p 楽天ふるさと納税
 
-      %li.result-category-image
-        = image_tag 'article1.png'
-        .result-category-name
-          %h4 オホーツク産ホタテ冷大
-        .result-category-city
-          %p 北海道紋別市
-        .result-category-amount
-          %p 寄付金額　20,000円
-        .result-category-comment
-          %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
-
-  .result-second-category-title
-    %h3 カテゴリー２
-    %ul
-      %li.result-category-image
-        = image_tag 'article1.png'
-        .result-category-name
-          %h4 オホーツク産ホタテ冷大
-        .result-category-city
-          %p 北海道紋別市
-        .result-category-amount
-          %p 寄付金額　20,000円
-        .result-category-comment
-          %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
-          
-      %li.result-category-image
-        = image_tag 'article1.png'
-        .result-category-name
-          %h4 オホーツク産ホタテ冷大
-        .result-category-city
-          %p 北海道紋別市
-        .result-category-amount
-          %p 寄付金額　20,000円
-        .result-category-comment
-          %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
-
-  .result-third-category-title
-    %h3 カテゴリー３
-    %ul
-      %li.result-category-image
-        = image_tag 'article1.png'
-        .result-category-name
-          %h4 オホーツク産ホタテ冷大
-        .result-category-city
-          %p 北海道紋別市
-        .result-category-amount
-          %p 寄付金額　20,000円
-        .result-category-comment
-          %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
-
-  %i.fab.fa-twitter-square.fa-3x
-  共有しよう！
 = javascript_pack_tag 'top'
