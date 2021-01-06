@@ -6,20 +6,20 @@ document.addEventListener('DOMContentLoaded', () => {
     $('.deduction').removeClass('hidden')
   })
 
-  $('.category_first').on('change',() => {
-    $('.select_category_title.first').append(
-      `<div class='select_category_title_first'><p>${'.category_first'}</p></div>`
+  $('.category-select-first').on('change',() => {
+    $('.result-first-category-title').append(
+      `<div class='select_category_title_first'><p>${'.category-select-first'}</p></div>`
     )
   })
 
-  $('.category_second').on('change',() => {
-    $('.select_category_title.second').append(
-      `<div class='select_category_title_second'><p>${'.category_second'}</p></div>`
+  $('.category-select-third').on('change',() => {
+    $('.result-second-category-title').append(
+      `<div class='select_category_title_second'><p>${'.category-select-second'}</p></div>`
     )
   })
-  $('.category_third').on('change',() => {
-    $('.select_category_title.third').append(
-      `<div class='select_category_title_third'><p>${'.category_third'}</p></div>`
+  $('.result-third-category-title').on('change',() => {
+    $('.result-third-category-title').append(
+      `<div class='select_category_title_third'><p>${'.category-select-third'}</p></div>`
     )
   })
 })
