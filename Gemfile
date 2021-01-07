@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'active_model_serializers'
 gem 'annotate'
+gem 'devise'
 gem 'aws-sdk-s3', require: false
 gem 'better_errors'
 gem 'binding_of_caller'
