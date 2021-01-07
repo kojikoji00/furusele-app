@@ -1,9 +1,17 @@
 .header
   .header_top
     .inner
-      ふるさとセレクト
+      %p ふるさとセレクト
   .header_main
     .inner
       = link_to 'ふるセレ', root_path
+      %i.fas.fa-utensils
+      %i.fas.fa-fish
+      %i.fas.fa-drumstick-bite
+
   .header_explanation
-    = link_to 'ふるさと納税とは', select_path
+    = link_to select_path do
+      .header_explanation_image
+        = image_tag 'wakaba.png'
+      .header_explanation_title
+        %p ふるさと納税とは
