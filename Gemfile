@@ -48,6 +48,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'rspec-rails'
   gem 'rubocop-rails'
+  gem 'rails-erd', group: [:development, :test]
 end
 
 group :development do
