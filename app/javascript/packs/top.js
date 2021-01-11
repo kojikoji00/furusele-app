@@ -2,7 +2,11 @@
 // import axios from 'modules/axios'
 
 document.addEventListener('DOMContentLoaded', () => {
-  $('.personal-form-group').on('change',() => {
+  $('.personal-form-group-family').on('change',() => {
+    $('.personal-form-group-action').trigger('click')
+  })
+
+  $('.personal-form-group-action').on('click',() => {
     $('.deduction').removeClass('hidden')
   })
 

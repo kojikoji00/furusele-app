@@ -24,10 +24,10 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'active_model_serializers'
 gem 'annotate'
-gem 'devise'
 gem 'aws-sdk-s3', require: false
 gem 'better_errors'
 gem 'binding_of_caller'
+gem 'devise'
 gem 'faker'
 gem 'hamlit'
 # gem 'mechanize'
@@ -46,9 +46,9 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'factory_bot_rails'
   gem 'pry-byebug'
+  gem 'rails-erd', group: %i[development test]
   gem 'rspec-rails'
   gem 'rubocop-rails'
-  gem 'rails-erd', group: [:development, :test]
 end
 
 group :development do
