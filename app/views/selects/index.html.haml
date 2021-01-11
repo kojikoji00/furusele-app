@@ -7,11 +7,14 @@
   .personal-title
     %h3 あなたの情報を入力してください
   .personal-form-group
-    = form_with url: 'root_path' do |f|
+    -# = form_with url: 'root_path' do |f|
+    = form_with(model: @profile, url: profile_path, method: 'put', remote: true) do |f|
       .personal-form-group-income
         %i.fas.fa-money-check
         = f.label :income, '年収　　'
         = f.select :income, {'300万円': 1, '350万円': 2, '400万円': 3, '450万円': 4, '500万円': 5, '550万円': 6, '600万円': 7, '650万円': 8, '700万円': 9, '750万円': 10, '800万円': 11, '850万円': 12, '900万円': 13, '950万円': 14, '1000万円': 15, '1200万円': 16, '1400万円': 17, '1600万円': 18}, { include_blank: '選択してください'}, { class: 'form-control' , required: true }
+        = f.submit '保存', class: 'btn-primary', id: 'file-btn'
+        -# = f.submit '保存', class: 'btn-primary', style: "display:none;", id: 'file-btn'
       .personal-form-group-family
       %i.fas.fa-house-user
         = f.label :family, '家族構成'
