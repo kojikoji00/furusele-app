@@ -136,3 +136,11 @@ select{
     }
   }
 }
+
+.personal {
+  &-form-group{
+    select{
+      margin-bottom: 20px;
+    }
+  }
+}

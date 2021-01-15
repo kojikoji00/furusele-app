@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require "csv"
+
+
+categories_csv = CSV.readlines("db/categories.csv")
+categories_csv.shift
+categories_csv.each do |row|
+  Category.create(name: row[1])
+end
+
+p categories_csv

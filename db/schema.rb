@@ -10,16 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_09_010337) do
+ActiveRecord::Schema.define(version: 2021_01_14_131957) do
 
-  create_table "profiles", force: :cascade do |t|
-    t.integer "user_id", null: false
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
     t.string "name"
-    t.string "income"
-    t.string "family"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
   create_table "selects", force: :cascade do |t|
@@ -36,6 +35,8 @@ ActiveRecord::Schema.define(version: 2021_01_09_010337) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "nickname", default: "sample", null: false
+    t.string "income", default: ""
+    t.string "family", default: ""
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
