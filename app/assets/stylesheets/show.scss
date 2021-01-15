@@ -10,9 +10,13 @@ ul{
   margin-bottom: 50px;
   
   &-title{
-    background-color: #9a5a24;
+    // background-color: #9a5a24;
+    padding: 0.4em 0.5em;/*文字の上下 左右の余白*/
+    color: #494949;/*文字色*/
+    background: #f4f4f4;/*背景色*/
+    border-left: solid 5px #7db4e6;/*左線*/
+    border-bottom: solid 3px #d7d7d7;/*下線*/
     h3{
-      color: #fff;
       margin: 0 20px;
       font-size: 20px;
     }
@@ -31,8 +35,11 @@ ul{
   &-title{
     background-color: #c79a74;
     text-align: center;
+    color: #494949;/*文字色*/
+    background: #f4f4f4;/*背景色*/
+    border-left: solid 5px #7db4e6;/*左線*/
+    border-bottom: solid 3px #d7d7d7;/*下線*/
     h3 {
-      color: #fff;
       font-size: 20px;
     }
   }
@@ -68,8 +75,11 @@ ul{
   &-title{
     background-color: #c79a74;
     text-align: center;
+    color: #494949;/*文字色*/
+    background: #f4f4f4;/*背景色*/
+    border-left: solid 5px #7db4e6;/*左線*/
+    border-bottom: solid 3px #d7d7d7;/*下線*/
     h3 {
-      color: #fff;
       font-size: 20px;
     }
   }
