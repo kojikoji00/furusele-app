@@ -1,11 +1,14 @@
-= render 'header'
+.show-header
+  .show-header_main
+    .inner
+      = link_to 'ふるセレ', root_path
 
 .explanation
   .explanation-title
     %h3 〜ふるさと納税とは〜
 
   .explanation-content
-    %i.fas.fa-user-graduate.fa-4x
+    = image_tag 'furusato_nouzei.png'
     %p
       任意の地方自治体に対して寄付が行える制度です。
       %br/
@@ -53,7 +56,7 @@
 
 .step
   .step-title
-    %h3 〜ステップ〜
+    %h3 〜手続きの方法〜
   .step-content
     %ul
       %li.step-content-item
@@ -61,18 +64,28 @@
           %p ステップ１
         .step-content-item-title
           %p 控除上限額を調べる
+          = image_tag 'calculator.jpg'
       %li.step-content-item
         .step-content-item-num
           %p ステップ２
         .step-content-item-title
-          %p 
-            自治体に寄付する
-            %br/
-            （ふるさと納税対象商品を
-            %br/
-            購入する）
+          %p
+            商品を選ぶ
+          = image_tag 'online_shopping.jpg'
+    %ul
       %li.step-content-item
         .step-content-item-num
           %p ステップ３
         .step-content-item-title
+          %p 
+            自治体に寄付する
+            %br/
+            （ふるさと納税対象商品を購入する）
+            = image_tag 'online_shopping.jpg'
+
+      %li.step-content-item
+        .step-content-item-num
+          %p ステップ４
+        .step-content-item-title
           %p 控除手続きをする
+          = image_tag 'documents.jpg'

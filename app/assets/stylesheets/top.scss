@@ -5,7 +5,7 @@ select{
   font-size: 20px;
 }
 
-.header {
+.header{
   background-image: url("inaka.jpg");
   padding-bottom: calc(100%*1365/2048);
   background-size: 100% auto;
@@ -26,7 +26,12 @@ select{
     float: left;
     font-size: 50px;
     .inner{
-      margin: 0 30px;
+      margin: 20px 30px;
+      p{
+        font-size: 10px;
+        color: white;
+        margin-left: 10px;
+      }
       a {
         text-decoration: none;
         color: white;
