@@ -7,12 +7,12 @@
       %p ふるさと納税の商品を選ぶなら
       = link_to 'ふるセレ', root_path
 
-  .header_explanation
-    = link_to select_path do
-      .header_explanation_image
-        = image_tag 'wakaba.png'
-      .header_explanation_title
-        %p ふるさと納税とは
+  -# .header_explanation
+  -#   = link_to select_path do
+  -#     .header_explanation_image
+  -#       = image_tag 'wakaba.png'
+  -#     .header_explanation_title
+  -#       %p ふるさと納税とは
 
   .log-in
     - if user_signed_in?

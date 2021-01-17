@@ -1,16 +1,16 @@
 class SelectsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   
-  def index
-    render 'selects/index'
-  end
+  # def index
+  #   render 'selects/index'
+  # end
 
-  def show
-    render 'selects/show'
-  end
+  # def show
+  #   render 'selects/show'
+  # end
 
   def new
-    @select = current_user.selects.build
+    render 'selects/new'
   end
 
   def create

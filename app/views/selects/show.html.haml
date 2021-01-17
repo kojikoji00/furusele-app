@@ -1,91 +1,82 @@
-.show-header
-  .show-header_main
-    .inner
-      = link_to 'ふるセレ', root_path
+.result
+  .result-title
+    %h3 結果一覧
+  .result-category-title-first
+  %ul
+    %li.result-category-image
+      = image_tag 'hotate.webp'
+      .result-category-name
+        %h4 オホーツク産ホタテ冷大
+      .result-category-city
+        %p 北海道紋別市
+      .result-category-amount
+        %p 寄付金額　20,000円
+      .result-category-comment
+        %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
 
-.explanation
-  .explanation-title
-    %h3 〜ふるさと納税とは〜
+    %li.result-category-image
+      = image_tag 'hotate.webp'
+      .result-category-name
+        %h4 オホーツク産ホタテ冷大
+      .result-category-city
+        %p 北海道紋別市
+      .result-category-amount
+        %p 寄付金額　20,000円
+      .result-category-comment
+        %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
 
-  .explanation-content
-    = image_tag 'furusato_nouzei.png'
-    %p
-      任意の地方自治体に対して寄付が行える制度です。
-      %br/
-      ふるさと納税の寄附金は税金の還付・控除が受けられます。
-      %br/
-      手続きをすると、最終的な実質負担額2,000円のみとなります。
-      %br/
-      さらにお礼品として、自治体から特産品や宿泊券がもらえる制度です。
+    %li.result-category-image
+      = image_tag 'hotate.webp'
+      .result-category-name
+        %h4 オホーツク産ホタテ冷大
+      .result-category-city
+        %p 北海道紋別市
+      .result-category-amount
+        %p 寄付金額　20,000円
+      .result-category-comment
+        %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
+        
+    %li.result-category-image
+      = image_tag 'hotate.webp'
+      .result-category-name
+        %h4 オホーツク産ホタテ冷大
+      .result-category-city
+        %p 北海道紋別市
+      .result-category-amount
+        %p 寄付金額　20,000円
+      .result-category-comment
+        %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
 
-.charm
-  .charm-title
-    %h3 〜何が良いのか〜
-  .charm-content
+    %li.result-category-image
+      = image_tag 'hotate.webp'
+      .result-category-name
+        %h4 オホーツク産ホタテ冷大
+      .result-category-city
+        %p 北海道紋別市
+      .result-category-amount
+        %p 寄付金額　20,000円
+      .result-category-comment
+        %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
+
+.footer
+  .link
+    .link-twitter
+      %i.fab.fa-twitter-square.fa-3x
+      %p 共有しよう！
     %ul
-      %li.charm-content-item
-        .charm-content-item-num
-          %p １
-        .charm-content-item-title
-          %p 様々な地域に寄付ができる
-        .charm-content-item-text
-          %p 
-            ご自身の出身地に限らず
-            %br/
-            全国の自治体に寄付ができる！
-      %li.charm-content-item
-        .charm-content-item-num
-          %p ２
-        .charm-content-item-title
-          %p 寄付の使い道が選べる
-        .charm-content-item-text
-          %p
-            まちづくりや復興支援など
-            %br/
-            使い道を指定できる自治体も！
-      %li.charm-content-item
-        .charm-content-item-num
-          %p ３
-        .charm-content-item-title
-          %p お礼品がもらえる
-        .charm-content-item-text
-          %p
-          応援した地域の
-          %br/
-          特産品などが届く
+      %li
+        = link_to 'https://www.satofull.jp/' do
+          .link-title
+            %h1 さ
+          .link-comment
+            %p さとふる
+      %li
+        = link_to 'https://event.rakuten.co.jp/furusato/' do
+          .link-image
+            = image_tag 'rakuten.png'
+          .link-comment
+            %p 楽天ふるさと納税
+.footer
+  お問い合わせ
 
-.step
-  .step-title
-    %h3 〜手続きの方法〜
-  .step-content
-    %ul
-      %li.step-content-item
-        .step-content-item-num
-          %p ステップ１
-        .step-content-item-title
-          %p 控除上限額を調べる
-          = image_tag 'calculator.jpg'
-      %li.step-content-item
-        .step-content-item-num
-          %p ステップ２
-        .step-content-item-title
-          %p
-            商品を選ぶ
-          = image_tag 'online_shopping.jpg'
-    %ul
-      %li.step-content-item
-        .step-content-item-num
-          %p ステップ３
-        .step-content-item-title
-          %p 
-            自治体に寄付する
-            %br/
-            （ふるさと納税対象商品を購入する）
-            = image_tag 'online_shopping.jpg'
-
-      %li.step-content-item
-        .step-content-item-num
-          %p ステップ４
-        .step-content-item-title
-          %p 控除手続きをする
-          = image_tag 'documents.jpg'
+= javascript_pack_tag 'top'
