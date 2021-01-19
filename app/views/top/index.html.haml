@@ -1,0 +1,137 @@
+= render 'header'
+
+-# .header
+-#   .header_main
+-#     .inner
+-#       = link_to 'ふるセレ', root_path
+
+.explanation
+  .explanation-title
+    %h3 「ふるセレ」とは
+
+  .explanation-content
+    %p
+      ふるさと納税ってよくわからない。
+      %br/
+      商品を選ぶのが面倒くさそう。
+      %br/
+      そんなあなたの代わりに、おすすめの商品を選ぶサイトです。
+      %br/
+      %br/
+      年収、家族形態、興味のあるカテゴリーを選ぶだけ。
+      %br/
+      約１分であなたの代わりに商品を選びます！
+      %br/
+      = link_to '試してみる', new_select_path
+
+.explanation
+  .explanation-title
+    %h3 〜そもそもふるさと納税って何？〜
+
+  .explanation-content
+    = image_tag 'furusato_nouzei.png'
+    %p
+      任意の地方自治体に対して寄付が行える制度です。
+      %br/
+      ふるさと納税の寄附金は税金の還付・控除が受けられます。
+      %br/
+      手続きをすると、最終的な実質負担額2,000円のみとなります。
+      %br/
+      さらにお礼品として、自治体から特産品や宿泊券がもらえる制度です。
+
+
+
+.charm
+  .charm-title
+    %h3 〜何が良いのか〜
+  .charm-content
+    %ul
+      %li.charm-content-item
+        .charm-content-item-num
+          %p １
+        .charm-content-item-title
+          %p 様々な地域に寄付ができる
+        .charm-content-item-text
+          %p 
+            ご自身の出身地に限らず
+            %br/
+            全国の自治体に寄付ができる！
+      %li.charm-content-item
+        .charm-content-item-num
+          %p ２
+        .charm-content-item-title
+          %p 寄付の使い道が選べる
+        .charm-content-item-text
+          %p
+            まちづくりや復興支援など
+            %br/
+            使い道を指定できる自治体も！
+      %li.charm-content-item
+        .charm-content-item-num
+          %p ３
+        .charm-content-item-title
+          %p お礼品がもらえる
+        .charm-content-item-text
+          %p
+          応援した地域の
+          %br/
+          特産品などが届く
+
+.step
+  .step-title
+    %h3 〜手続きの方法〜
+  .step-content
+    %ul
+      %li.step-content-item
+        .step-content-item-num
+          %p ステップ１
+        .step-content-item-title
+          %p 控除上限額を調べる
+          = image_tag 'calculator.jpg'
+      %li.step-content-item
+        .step-content-item-num
+          %p ステップ２
+        .step-content-item-title
+          %p
+            商品を選ぶ
+          = image_tag 'online_shopping.jpg'
+    %ul
+      %li.step-content-item
+        .step-content-item-num
+          %p ステップ３
+        .step-content-item-title
+          %p 
+            自治体に寄付する
+            %br/
+            （ふるさと納税対象商品を購入する）
+            = image_tag 'online_shopping.jpg'
+
+      %li.step-content-item
+        .step-content-item-num
+          %p ステップ４
+        .step-content-item-title
+          %p 控除手続きをする
+          = image_tag 'documents.jpg'
+
+
+ふるセレで商品を選び購入したら、
+%br/
+送付されるワンストップ申請書に必要事項を書いて返送するだけ！
+%br/
+実質負担額2,000円で色々な商品が手に入ります！
+%br/
+
+= link_to 'まずは商品を選んでみる', new_select_path
+%br/
+%br/
+
+= link_to '会員登録', new_user_registration_path
+%br/
+会員登録をすると、過去の選択履歴が確認できます。
+%br/
+%br/
+
+= link_to 'ログイン', new_user_session_path
+%br/
+会員登録済みの方はこちら
+

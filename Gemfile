@@ -33,6 +33,7 @@ gem 'hamlit'
 # gem 'mechanize'
 gem 'activerecord-import'
 gem 'nokogiri'
+gem 'ancestry'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
