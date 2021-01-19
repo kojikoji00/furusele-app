@@ -1,5 +1,5 @@
 class SelectsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:create, :edit, :update, :destroy]
   
   # def index
   #   render 'selects/index'
@@ -42,6 +42,17 @@ class SelectsController < ApplicationController
     select.destroy!
     redirect_to root_path, notice: '削除に成功しました'
   end
+
+  def index
+    Category.where(ancestry: nil).each do |parent|
+      @category_parent_array << parent.name
+    end
+  end
+
+  def get_category_children
+    @category_children = Category.find_by(name: "#{params[:parent_name]}", ancestry: nil).children
+  end
+
 
   private
 

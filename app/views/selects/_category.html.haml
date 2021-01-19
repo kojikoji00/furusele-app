@@ -1,4 +1,5 @@
 = form_with url: 'select_path' do |f|
   = f.label :category, '■'
-  = f.select :category, {'肉': 1, '魚介': 2, '米・パン': 3, '果物・フルーツ': 4, '野菜': 5, '酒・アルコール': 6, '飲料・ドリンク': 7, 'お菓子・スイーツ': 8, '惣菜・加工品': 9, '調味料': 10, '旅行券・チケット': 11, '雑貨・日用品': 12, '花・観葉植物': 13, '定期便': 13}, { include_blank: '選択してください'}, { class: 'select' , required: true }
+  -# = f.select :category, {'肉': 1, '魚介': 2, '米・パン': 3, '果物・フルーツ': 4, '野菜': 5, '酒・アルコール': 6, '飲料・ドリンク': 7, 'お菓子・スイーツ': 8, '惣菜・加工品': 9, '調味料': 10, '旅行券・チケット': 11, '雑貨・日用品': 12, '花・観葉植物': 13}, { include_blank: '選択してください'}, { class: 'select' , required: true }
+  = f.collection_select :category_id, Category.where(ancestry: nil), :id, :name
   = f.submit '登録する', class: 'btn-primary', id: 'file-btn'
