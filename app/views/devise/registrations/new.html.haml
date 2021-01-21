@@ -4,10 +4,6 @@
     = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
       = render "devise/shared/error_messages", resource: resource
       .field
-        .field-nickname
-          = f.label :ニックネーム
-          %br/
-          = f.text_field :nickname, autofocus: true, autocomplete: "sample"
         .field-mail
           = f.label :メールアドレス
           %br/
