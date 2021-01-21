@@ -12,19 +12,15 @@ end
 
 
 doc = Nokogiri::HTML.parse(html, nil, charset)
-# sidebox_body
+
 nodes = doc.xpath('//section[@class="Section"]')
 node = nodes.xpath('//div[@class="SideBox__body"]')
-category_title = node.css('a').text
-# category_link = node.css('a')[0][:href]
-category_link = node.css('a[href]')
 
-# node = nodes.xpath('//a')
-puts category_title
-puts category_link
-# nodes.each do |node|
-#   title_node = node.xpath('')
-#   title = title_node.xpath('a')
-#   puts title.text
-# end
+node.each do |category|
+  category_title = category.css('a').text
+  category_link = category.css('a[href]')
+  puts category_title
+  puts category_link
+end
+
 
