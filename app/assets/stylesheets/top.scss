@@ -6,9 +6,9 @@ select{
 }
 
 .header{
-  background-color: seagreen;
+  // background-color: seagreen;
   // background-image: url("inaka.jpg");
-  padding-bottom: calc(100%*1365/2048);
+  // padding-bottom: calc(100%*1365/2048);
   background-size: 100% auto;
   margin-bottom: 50px;
   font: poppins;
@@ -30,12 +30,12 @@ select{
       margin: 20px 30px;
       p{
         font-size: 10px;
-        color: white;
+        color: black;
         margin-left: 10px;
       }
       a {
         text-decoration: none;
-        color: white;
+        color: black;
       }
     }
   }
@@ -153,5 +153,16 @@ select{
     select{
       margin-bottom: 20px;
     }
+  }
+}
+
+
+// トップ画面のスライダー機能
+.slider {
+  text-align: center;
+  clear: both;
+  margin: 0 30px 30px 30px;
+  img{
+    height: 400px;
   }
 }

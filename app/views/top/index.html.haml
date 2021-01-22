@@ -5,6 +5,19 @@
 -#     .inner
 -#       = link_to 'ふるセレ', root_path
 
+.previews
+  .slider
+    = image_tag 'article1.png'
+    = image_tag 'hotate.webp'
+    = image_tag 'flower.jpg'
+    = image_tag 'ikura.jpg'
+    = image_tag 'strawberry.jpg'
+    = image_tag 'pork.jpg'
+    = image_tag 'vegetables.jpg'
+    = image_tag 'salmon.jpg'
+    = image_tag 'beaf.jpg'
+
+
 .explanation
   .explanation-title
     %h3 「ふるセレ」とは
@@ -134,4 +147,6 @@
 = link_to 'ログイン', new_user_session_path
 %br/
 会員登録済みの方はこちら
+
+= javascript_pack_tag 'top'
 
