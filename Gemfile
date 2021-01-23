@@ -34,6 +34,8 @@ gem 'hamlit'
 gem 'activerecord-import'
 gem 'nokogiri'
 gem 'ancestry'
+gem 'carrierwave'
+gem 'mini_magick'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

@@ -1,0 +1,32 @@
+$text-color: #333333;
+
+a{
+  text-decoration: none;
+  color: $text-color
+}
+
+.footer {
+  margin: 20px;
+  margin-top: 50px;
+  .link {
+    &-twitter{
+      float: left;
+      text-align: center;
+    }
+    ul{
+      float: right;
+      li{
+        margin: 10px;
+        img{
+          height: 45px;
+        }
+        h1{
+          font-size: 34px;
+        }
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

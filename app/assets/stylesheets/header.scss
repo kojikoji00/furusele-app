@@ -1,0 +1,47 @@
+.header{
+  margin-bottom: 50px;
+  &_top {
+    font-size: 10px;
+    background-color: $text-color;
+    .inner{
+      color: white;
+      margin: 0 30px;
+      text-align: center;
+    }
+  }
+  &_main {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    float: left;
+    font-size: 50px;
+    .inner{
+      margin: 20px 30px;
+      p{
+        font-size: 15px;
+        margin-left: 10px;
+        font-weight: 500;
+      }
+      a {
+        text-decoration: none;
+        color: $text-color;
+        font-weight: 800;
+      }
+      a:hover{
+        opacity: 0.6;
+      }
+    }
+  }
+  &_explanation {
+    float: right;
+    text-align: center;
+    margin:20px;
+    img {
+      width: 30px;
+    }
+    a {
+      text-decoration: none;
+      font-size: 10px;
+      color: white;
+    }
+  }
+}
