@@ -40,3 +40,22 @@
     }
   }
 }
+
+.button{
+  .btn {
+    display: block;
+    width: 200px;
+    margin: 20px 0 0 20px;
+    padding: 0.8em;
+    text-align: center;
+    text-decoration: none;
+    color: #EC407A;
+    border: 2px solid #EC407A;
+    border-radius: 3px;
+    transition: .4s;
+  }
+  .btn:hover {
+    background: #EC407A;
+    color: #fff;
+  }
+}

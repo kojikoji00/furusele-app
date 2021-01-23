@@ -24,18 +24,18 @@
 
   .explanation-content
     %p
-      ふるさと納税ってよくわからない。
+      ふるさと納税ってよくわからないですよね。
       %br/
-      商品を選ぶのが面倒くさそう。
-      %br/
-      そんなあなたの代わりに、おすすめの商品を選ぶサイトです。
+      商品を選ぶのが大変だし
       %br/
       %br/
-      年収、家族形態、興味のあるカテゴリーを選ぶだけ。
+      そんなあなたの代わりに、おすすめの商品を選びます。
       %br/
-      約１分であなたの代わりに商品を選びます！
       %br/
-      = link_to '試してみる', new_select_path
+      ふるセレでは約１分であなたの代わりに商品を選びます！
+      %br/
+      .button
+        = link_to '試してみる', new_select_path, class: 'btn secondary'
 
 .explanation
   .explanation-title
@@ -134,17 +134,20 @@
 実質負担額2,000円で色々な商品が手に入ります！
 %br/
 
-= link_to 'まずは商品を選んでみる', select_path
+.button
+  = link_to 'まずは商品を選んでみる', new_select_path, class: 'btn secondary'
 %br/
 %br/
 
-= link_to '会員登録', new_user_registration_path
+.button
+  = link_to '会員登録', new_user_registration_path, class: 'btn secondary'
 %br/
 会員登録をすると、過去の選択履歴が確認できます。
 %br/
 %br/
 
-= link_to 'ログイン', new_user_session_path
+.button
+  = link_to 'ログイン', new_user_session_path, class: 'btn secondary'
 %br/
 会員登録済みの方はこちら
 
