@@ -1,83 +1,40 @@
+$text-color: #333333;
+$base-color: #e74c3c;
+$back-ground-color: #ffffdf;
+$text-size: 22px;
+
 label{
-  font-size: 20px;
+  font-size: $text-size;
 }
 select{
-  font-size: 20px;
+  font-size: $text-size;
 }
 
-.header{
-  // background-color: seagreen;
-  // background-image: url("inaka.jpg");
-  // padding-bottom: calc(100%*1365/2048);
-  background-size: 100% auto;
-  margin-bottom: 50px;
-  font: poppins;
-  &_top {
-    font-size: 10px;
-    background-color: black;
-    .inner{
-      color: white;
-      margin: 0 30px;
-      text-align: center;
-    }
-  }
-  &_main {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    float: left;
-    font-size: 50px;
-    .inner{
-      margin: 20px 30px;
-      p{
-        font-size: 10px;
-        color: black;
-        margin-left: 10px;
-      }
-      a {
-        text-decoration: none;
-        color: black;
-      }
-    }
-  }
-  &_explanation {
-    float: right;
-    text-align: center;
-    margin:20px;
-    img {
-      width: 30px;
-    }
-    a {
-      text-decoration: none;
-      font-size: 10px;
-      color: white;
-    }
-  }
-}
 
 .personal {
   margin: 0 30px;
   clear: both;
-  border: 3px solid #9db100;
+  border: 3px solid $base-color;
   &-title{
-    background-color: #9db100;
-    font-size: 22px;
+    background-color: $base-color;
+    font-size: $text-size;
     font-weight: bold;
     color: #fff;
   }
   &-form-group {
     padding: 36px 20px;
-    background: #ffffdf;
-    font-size: 20px;
+    background: $back-ground-color;
+    font-size: $text-size;
   }
 }
 
 .category {
   margin: 50px 30px;
   clear: both;
-  border: 3px solid #9db100;
+  border: 3px solid $base-color;
   &-title{
-    background-color: #9db100;
-    font-size: 22px;
+    background-color: $base-color;
+    font-size: $text-size;
     font-weight: bold;
     color: #fff;
   }
@@ -116,38 +73,6 @@ select{
   }
 }
 
-.footer {
-  margin: 20px;
-  margin-top: 50px;
-  .link {
-    &-twitter{
-      float: left;
-      text-align: center;
-    }
-    ul{
-      float: right;
-      li{
-        margin: 10px;
-        img{
-          height: 45px;
-        }
-        h1{
-          font-size: 34px;
-          a {
-            text-decoration: none;
-          }
-        }
-        p {
-          font-size: 12px;
-          a {
-            text-decoration: none;
-          }
-        }
-      }
-    }
-  }
-}
-
 .personal {
   &-form-group{
     select{
@@ -157,13 +82,3 @@ select{
 }
 
 
-// トップ画面のスライダー機能
-.slider {
-  text-align: center;
-  clear: both;
-  margin: 0 30px 30px 30px;
-  img{
-    height: 400px;
-    object-fit: cover;
-  }
-}

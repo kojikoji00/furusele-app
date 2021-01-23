@@ -1,3 +1,5 @@
+$text-color: #333333;
+
 .form{
   margin: 0 30px;
   h2{
@@ -6,7 +8,6 @@
     line-height: 1.2;
     margin-bottom: 10px;
     padding-bottom: 4px;
-    color: #111111;
   }
   .inner {
     margin-top: 30px;
@@ -38,24 +39,5 @@
       border: 1px #a88734 solid;
       margin-bottom: 30px;
     }
-  }
-}
-
-.button{
-  .btn {
-    display: block;
-    width: 200px;
-    margin: 20px 0 0 20px;
-    padding: 0.8em;
-    text-align: center;
-    text-decoration: none;
-    color: #EC407A;
-    border: 2px solid #EC407A;
-    border-radius: 3px;
-    transition: .4s;
-  }
-  .btn:hover {
-    background: #EC407A;
-    color: #fff;
   }
 }
