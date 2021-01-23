@@ -16,7 +16,7 @@
       - if devise_mapping.rememberable?
         .field
           = f.check_box :remember_me
-          = f.label :ログインしたままにする
+          = f.label :ログインしたままにする, class: 'remember'
       .actions
         = f.submit "ログイン"
     = render "devise/shared/links"
