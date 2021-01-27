@@ -65,8 +65,6 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    ancestry (3.2.1)
-      activerecord (>= 4.2.0)
     annotate (3.1.1)
       activerecord (>= 3.2, < 7.0)
       rake (>= 10.4, < 14.0)
@@ -352,7 +350,6 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers
   activerecord-import
-  ancestry
   annotate
   aws-sdk-s3
   better_errors

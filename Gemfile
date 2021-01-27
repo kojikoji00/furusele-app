@@ -33,7 +33,6 @@ gem 'hamlit'
 # gem 'mechanize'
 gem 'activerecord-import'
 gem 'nokogiri'
-gem 'ancestry'
 gem 'carrierwave'
 gem 'mini_magick'
 
