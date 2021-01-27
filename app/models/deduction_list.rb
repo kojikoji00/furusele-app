@@ -1,0 +1,2 @@
+class DeductionList < ApplicationRecord
+end
