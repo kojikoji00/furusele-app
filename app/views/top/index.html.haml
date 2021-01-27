@@ -7,20 +7,23 @@
 
 .previews
   .slider
-    = image_tag 'article1.png'
-    = image_tag 'hotate.webp'
-    = image_tag 'flower.jpg'
+    = image_tag 'furusato.jpg'
+    = image_tag 'farmer.jpg'
     = image_tag 'ikura.jpg'
+    = image_tag 'rice.jpg'
+    = image_tag 'vegetables.jpg'
+    = image_tag 'crab.jpg'
     = image_tag 'strawberry.jpg'
     = image_tag 'pork.jpg'
-    = image_tag 'vegetables.jpg'
-    = image_tag 'salmon.jpg'
     = image_tag 'beaf.jpg'
+
 
 
 .explanation
   .explanation.title
-    %h3 「ふるセレ」とは
+    %h3
+      %span.under> 「ふるセレ」
+      とは
 
   .explanation-content
     %p
@@ -37,12 +40,15 @@
 
 .explanation
   .explanation.title
-    %h3 〜そもそもふるさと納税って何？〜
+    %h3
+      そもそも
+      %span.under> ふるさと納税
+      って何？
 
   .explanation-content
     = image_tag 'furusato_nouzei.png'
     %p
-      実質2,000の負担で、各地の美味しい名産品がもらえちゃいます！
+      実質2,000円の負担で、各地の美味しい名産品がもらえちゃいます！
       %br/
       %br/
       税金の控除もあってお得だし、ワンストップ特例申請制度を使えば確定申告もいりません。
@@ -53,47 +59,39 @@
 
 .charm
   .charm.title
-    %h3 〜ふるさと納税の何が良いのか〜
+    %h3
+      ふるさと納税の
+      %span.under> ポイント
   .charm-content
     %ul
-      %li.charm-content-item
-        .charm-content-item-num
-          %p １
-        .charm-content-item-title
-          %p 様々な地域に寄付ができる
-        .charm-content-item-text
-          %p 
-            ご自身の出身地に限らず
-            %br/
-            全国の自治体に寄付ができる！
-      %li.charm-content-item
-        .charm-content-item-num
-          %p ２
-        .charm-content-item-title
-          %p 寄付の使い道が選べる
-        .charm-content-item-text
+      %li
+        .charm-item-title
+          %p ①　様々な地域に寄付ができる
+        .charm-item-text
           %p
-            まちづくりや復興支援など
-            %br/
-            使い道を指定できる自治体も！
-      %li.charm-content-item
-        .charm-content-item-num
-          %p ３
-        .charm-content-item-title
-          %p お礼品がもらえる
-        .charm-content-item-text
+            ご自身の出身地に限らず全国の自治体に寄付ができる！
+      %li
+        .charm-item-title
+          %p ②　寄付の使い道が選べる
+        .charm-item-text
           %p
-          応援した地域の
-          %br/
-          特産品などが届く
+            まちづくりや復興支援など使い道を指定できる自治体も！
+      %li
+        .charm-item-title
+          %p ③　お礼品がもらえる
+        .charm-item-text
+          %p
+          応援した地域の特産品などが届く
 
 .step.title
-  %h3 〜手続きの方法〜
+  %h3
+    %span.under> 手続き
+    の方法
 %ul.step
   %li
     %span.icon 01
     %dl
-      %dt 上限額
+      %dt 知る
       %dd 税金が控除される上限額を調べよう
       %br/
   %li
@@ -108,7 +106,7 @@
   %li
     %span.icon 03
     %dl
-      %dt 商品購入
+      %dt 買う
       %dd 自治体に寄付する（ふるさと納税対象商品を購入する）
   %li
     %span.icon 04
@@ -116,7 +114,7 @@
       %dt 申請
       %dd ワンストップ申請書で控除手続きをする
       %br/
-%p たったこれだけ！
+%p これだけ！
 
 .button
   = link_to 'まずは商品を選んでみる', new_select_path, class: 'btn secondary'
@@ -133,6 +131,7 @@
   = link_to 'ログイン', new_user_session_path, class: 'link-btn'
   %br/
   %p 会員登録済みの方はこちら
+  %br/
+  %br/
 
 = javascript_pack_tag 'top'
-

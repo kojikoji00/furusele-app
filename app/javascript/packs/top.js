@@ -26,12 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
       `<div class='select_category_title_third'><h3>カテゴリー３：${'.category-select-third'}</h3></div>`
     )
   })
-})
-
-// $('.slider').slick();
-$('.slider').slick({
-  slidesToShow: 2,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 4200,
+  $('.slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4200,
+  })
 });
+
