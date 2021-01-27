@@ -20,3 +20,10 @@ category_details_csv.each do |detail_row|
   CategoryDetail.create(id: detail_row[0], name: detail_row[1], category_id: detail_row[2], satofull_id: detail_row[3])
 end
 
+
+deduction_lists_csv = CSV.readlines("db/deduction_list.csv")
+deduction_lists_csv.shift
+deduction_lists_csv.each do |deduction_row|
+  DeductionList.create(id: deduction_row[0], family_id: deduction_row[1], income_id: deduction_row[2], deduction: deduction_row[3])
+end
+

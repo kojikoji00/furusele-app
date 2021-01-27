@@ -11,7 +11,7 @@ class SelectsController < ApplicationController
 
   def new
     @category_parent_array = ["---"]
-    Category.where(ancestry: nil).each do |parent|
+    Category.all.each do |parent|
         @category_parent_array << parent.name
     end
   end
