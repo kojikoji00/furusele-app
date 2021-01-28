@@ -27,3 +27,15 @@ deduction_lists_csv.each do |deduction_row|
   DeductionList.create(id: deduction_row[0], family_id: deduction_row[1], income_id: deduction_row[2], deduction: deduction_row[3])
 end
 
+income_csv = CSV.readlines("db/income.csv")
+income_csv.shift
+income_csv.each do |income_row|
+  Income.create(id: income_row[0], annual_income: income_row[1])
+end
+
+family_csv = CSV.readlines("db/family.csv")
+family_csv.shift
+family_csv.each do |family_row|
+  Family.create(id: family_row[0], family_member: family_row[1])
+end
+
