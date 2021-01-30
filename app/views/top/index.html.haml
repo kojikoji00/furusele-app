@@ -36,7 +36,8 @@
       ぜひお試しください！
       %br/
       .button
-        = link_to '試してみる', new_select_path, class: 'btn secondary'
+        -# = link_to '試してみる', new_select_path, class: 'btn secondary'
+        = link_to '試してみる', edit_user_registration_path, class: 'btn secondary'
 
 .explanation
   .explanation.title
@@ -117,7 +118,7 @@
 %p これだけ！
 
 .button
-  = link_to 'まずは商品を選んでみる', new_select_path, class: 'btn secondary'
+  = link_to 'まずは商品を選んでみる', new_user_path, class: 'btn secondary'
 %br/
 %br/
 
