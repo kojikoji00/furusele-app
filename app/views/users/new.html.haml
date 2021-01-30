@@ -1,0 +1,20 @@
+= render 'commons/header'
+
+.personal
+  .personal-title
+    %h3 あなたの情報を入力してください
+  .prtsonal-form
+    .personal-form-group
+      = form_with url: user_path(@user) do |f|
+        .personal-form-group-income
+          %i.fas.fa-money-check
+          = f.label :income, '年収    '
+          %br/
+          = f.collection_select :income_id, Income.all, :id, :annual_income
+        .personal-form-group-family
+          %i.fas.fa-house-user
+          = f.label :family, '家族構成'
+          %br/
+          = f.collection_select :family_id, Family.all, :id, :family_member
+        .personal-form-group-action
+          = f.submit '登録する', class: 'btn-primary', id: 'file-btn'
