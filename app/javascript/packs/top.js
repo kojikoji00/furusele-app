@@ -2,6 +2,9 @@
 // import axios from 'modules/axios'
 
 document.addEventListener('DOMContentLoaded', () => {
+});
+
+$(function() {
   $('.slider').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -9,4 +12,3 @@ document.addEventListener('DOMContentLoaded', () => {
     autoplaySpeed: 4200,
   })
 });
-
