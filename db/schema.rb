@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 2021_01_28_143736) do
 
   create_table "histories", force: :cascade do |t|
     t.bigint "user_id", null: false
+    t.integer "category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_histories_on_user_id"
@@ -68,11 +69,6 @@ ActiveRecord::Schema.define(version: 2021_01_28_143736) do
 
   create_table "incomes", force: :cascade do |t|
     t.string "annual_income"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "selects", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

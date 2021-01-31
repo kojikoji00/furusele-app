@@ -1,3 +1,3 @@
-class Select < ApplicationRecord
-  belongs_to :category
-end
+# class Select < ApplicationRecord
+#   belongs_to :category
+# end
