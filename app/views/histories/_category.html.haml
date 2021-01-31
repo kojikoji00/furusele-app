@@ -1,0 +1,5 @@
+= form_with(model: @history, url: histories_path) do |f|
+  = f.label :category, '■'
+  = f.collection_select :category_id, Category.all, :id, :name
+  -# = f.collection_select :category_id, CategoryDetail.all, :id, :name #class: child_class
+  = f.submit '登録する', class: 'btn-primary', id: 'file-btn'

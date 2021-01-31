@@ -3,9 +3,6 @@ class ApplicationController < ActionController::Base
 
   
   protected
-  # def after_update_path_for(resource)
-  #   users_path
-  # end
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:account_update, keys: %i[income_id family_id])

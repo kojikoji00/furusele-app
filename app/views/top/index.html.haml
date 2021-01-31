@@ -1,10 +1,5 @@
 = render 'commons/header'
 
--# .header
--#   .header_main
--#     .inner
--#       = link_to 'ふるセレ', root_path
-
 .previews
   .slider
     = image_tag 'furusato.jpg'
@@ -118,7 +113,7 @@
 %p これだけ！
 
 .button
-  = link_to 'まずは商品を選んでみる', new_user_path, class: 'btn secondary'
+  = link_to 'まずは商品を選んでみる', edit_user_registration_path, class: 'btn secondary'
 %br/
 %br/
 
