@@ -12,24 +12,38 @@ end
 
 
 doc = Nokogiri::HTML.parse(html, nil, charset)
-
-# nodes = doc.xpath('//section[@class="Section"]')
-# nodes = doc.xpath('//ul[@class="ItemList"]')
 nodes = doc.xpath('//ul[@class="ItemList"]')
-# node = nodes.xpath('//div[@class="ItemList__body"]')
-node = nodes.css('li')
 
-node.each do |category|
-  category_link = category.css('a').attribute('href')
-  category_title = category.xpath('//p[@class="ItemList__name"]').inner_text
-  category_city = category.xpath('//p[@class="ItemList__city"]').inner_text
-  category_price = category.xpath('//p[@class="ItemList__price"]').inner_text
-  # category_review = category.xpath('//p[@class="ItemList__review"]')
-  puts category_title
-  puts category_city
-  puts category_price
-  puts category_link
-  # puts category_review
+array = []
+f = []
+
+nodes.css('a').first(10).each do |node|
+  link = 'https://www.satofull.jp' + node[:href]
+  name = node.css('.ItemList__name').text
+  city = node.css('.ItemList__city').text
+  price = node.css('.ItemList__price').text
+  review = node.css('img').attribute('src')
+  array << [link, name, city, price, review]
 end
+
+array.shuffle.each do |t|
+   f << t
+end
+
+# メモ
+# if x = 1つだったら
+#   number = 5
+# elsif x = 2つだったら
+#   number = 4
+# elsif x = 3つだったら
+#   number = 3
+# elsif x = 4つだったら
+#   number = 2
+# elsif x = 5つだったら
+#   number = 1
+# end
+
+puts  f.first(5).inspect
+
 
 
