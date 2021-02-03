@@ -1,64 +1,80 @@
+
 = render 'commons/header'
 
+.deduction
+  = "あなたの控除額は#{@deduction.deduction.to_s(:delimited)}円です"
 .result
-  .result.title
+  .result-title
     %h3 結果一覧
-  .result-category-title-first
   %ul
-    %li.result-category-image
-      = image_tag 'hotate.webp'
-      .result-category-name
+    -# = link_to '{link}'
+    %li
+      .result-image
+        = image_tag 'hotate.webp'
+      .result-name
         %h4 オホーツク産ホタテ冷大
-      .result-category-city
+      .result-city
         %p 北海道紋別市
-      .result-category-amount
+      .result-price
         %p 寄付金額　20,000円
-      .result-category-comment
+      .result-description
+        %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
+    %li
+      .result-image
+        = image_tag 'hotate.webp'
+      .result-name
+        %h4 オホーツク産ホタテ冷大
+      .result-city
+        %p 北海道紋別市
+      .result-price
+        %p 寄付金額　20,000円
+      .result-description
+        %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
+    %li
+      .result-image
+        = image_tag 'hotate.webp'
+      .result-name
+        %h4 オホーツク産ホタテ冷大
+      .result-city
+        %p 北海道紋別市
+      .result-price
+        %p 寄付金額　20,000円
+      .result-description
+        %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
+    %li
+      .result-image
+        = image_tag 'hotate.webp'
+      .result-name
+        %h4 オホーツク産ホタテ冷大
+      .result-city
+        %p 北海道紋別市
+      .result-price
+        %p 寄付金額　20,000円
+      .result-description
+        %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
+    %li
+      .result-image
+        = image_tag 'hotate.webp'
+      .result-name
+        %h4 オホーツク産ホタテ冷大
+      .result-city
+        %p 北海道紋別市
+      .result-price
+        %p 寄付金額　20,000円
+      .result-description
+        %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
+    %li
+      .result-image
+        = image_tag 'hotate.webp'
+      .result-name
+        %h4 オホーツク産ホタテ冷大
+      .result-city
+        %p 北海道紋別市
+      .result-price
+        %p 寄付金額　20,000円
+      .result-description
         %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
 
-    %li.result-category-image
-      = image_tag 'hotate.webp'
-      .result-category-name
-        %h4 オホーツク産ホタテ冷大
-      .result-category-city
-        %p 北海道紋別市
-      .result-category-amount
-        %p 寄付金額　20,000円
-      .result-category-comment
-        %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
-
-    %li.result-category-image
-      = image_tag 'hotate.webp'
-      .result-category-name
-        %h4 オホーツク産ホタテ冷大
-      .result-category-city
-        %p 北海道紋別市
-      .result-category-amount
-        %p 寄付金額　20,000円
-      .result-category-comment
-        %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
-        
-    %li.result-category-image
-      = image_tag 'hotate.webp'
-      .result-category-name
-        %h4 オホーツク産ホタテ冷大
-      .result-category-city
-        %p 北海道紋別市
-      .result-category-amount
-        %p 寄付金額　20,000円
-      .result-category-comment
-        %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
-
-    %li.result-category-image
-      = image_tag 'hotate.webp'
-      .result-category-name
-        %h4 オホーツク産ホタテ冷大
-      .result-category-city
-        %p 北海道紋別市
-      .result-category-amount
-        %p 寄付金額　20,000円
-      .result-category-comment
-        %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
 
 .footer
   .link

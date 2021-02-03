@@ -26,9 +26,9 @@ nodes.css('a').first(10).each do |node|
   city = node.css('.ItemList__city').text
   price = node.css('.ItemList__price>span').text.delete(',').to_i
   description = node.css('.ItemList__description').text
-  picture = 'https://www.satofull.jp' + node.css('.ItemList__picture>img').attribute('src')
-  review = 'https://www.satofull.jp' + node.css('.ItemList__review>img').attribute('src')
-  array << [link, name, city, price,description, picture, review]
+  picture_image_path = 'https://www.satofull.jp' + node.css('.ItemList__picture>img').attribute('src')
+  review_image_path = 'https://www.satofull.jp' + node.css('.ItemList__review>img').attribute('src')
+  array << [link, name, city, price,description, picture_image_path, review_image_path]
 end
 
 array.shuffle.each do |t|
