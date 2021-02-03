@@ -1,9 +1,11 @@
+
 = render 'commons/header'
 
+.deduction
+  = "あなたの控除額は#{@deduction.deduction}円です"
 .result
   .result.title
     %h3 結果一覧
-  .result-category-title-first
   %ul
     %li.result-category-image
       = image_tag 'hotate.webp'

@@ -55,13 +55,13 @@ ActiveRecord::Schema.define(version: 2021_01_28_143736) do
 
   create_table "history_details", force: :cascade do |t|
     t.bigint "history_id", null: false
-    t.string "title"
+    t.string "link"
+    t.string "name"
     t.string "city"
-    t.string "donation_amount"
-    t.string "infomation"
-    t.string "evaluation"
-    t.string "address"
-    t.string "image_path"
+    t.string "price"
+    t.string "description"
+    t.string "picture_image_path"
+    t.string "review_image_path"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["history_id"], name: "index_history_details_on_history_id"
