@@ -1,0 +1,27 @@
+.deduction{
+  margin-left: 20px;
+  font-size: 26px;
+}
+
+.result {
+  margin: 0 20px;
+  margin-top: 20px;
+  &-title{
+  }
+  h3 {font-size: 25px;}
+  h4 {font-size: 16px;}
+  p {font-size: 12px;}
+  ul{
+    li{
+      list-style: none;
+      .result-image{
+        margin-top: 100px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        img{
+          width: 200px;
+        }
+      }
+    }
+  }
+}
