@@ -24,7 +24,7 @@ nodes.css('a').first(10).each do |node|
   link = 'https://www.satofull.jp' + node[:href]
   name = node.css('.ItemList__name').text
   city = node.css('.ItemList__city').text
-  price = node.css('.ItemList__price>span').text
+  price = node.css('.ItemList__price>span').text.delete(',').to_i
   description = node.css('.ItemList__description').text
   picture = 'https://www.satofull.jp' + node.css('.ItemList__picture>img').attribute('src')
   review = 'https://www.satofull.jp' + node.css('.ItemList__review>img').attribute('src')
