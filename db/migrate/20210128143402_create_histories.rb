@@ -3,6 +3,7 @@ class CreateHistories < ActiveRecord::Migration[6.0]
     create_table :histories do |t|
       t.references :user, null: false
       t.integer :category_id
+      t.integer :category_detail_id
       t.timestamps
     end
   end

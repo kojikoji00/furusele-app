@@ -3,78 +3,33 @@
 
 .deduction
   = "あなたの控除額は#{@deduction.deduction.to_s(:delimited)}円です"
+.select-catgory
+  = "あなたの選んだカテゴリーは#{Category.find(@history.category_id).name}です"
+
 .result
   .result-title
     %h3 結果一覧
   %ul
-    -# = link_to '{link}'
-    %li
-      .result-image
-        = image_tag 'hotate.webp'
-      .result-name
-        %h4 オホーツク産ホタテ冷大
-      .result-city
-        %p 北海道紋別市
-      .result-price
-        %p 寄付金額　20,000円
-      .result-description
-        %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
-    %li
-      .result-image
-        = image_tag 'hotate.webp'
-      .result-name
-        %h4 オホーツク産ホタテ冷大
-      .result-city
-        %p 北海道紋別市
-      .result-price
-        %p 寄付金額　20,000円
-      .result-description
-        %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
-    %li
-      .result-image
-        = image_tag 'hotate.webp'
-      .result-name
-        %h4 オホーツク産ホタテ冷大
-      .result-city
-        %p 北海道紋別市
-      .result-price
-        %p 寄付金額　20,000円
-      .result-description
-        %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
-    %li
-      .result-image
-        = image_tag 'hotate.webp'
-      .result-name
-        %h4 オホーツク産ホタテ冷大
-      .result-city
-        %p 北海道紋別市
-      .result-price
-        %p 寄付金額　20,000円
-      .result-description
-        %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
-    %li
-      .result-image
-        = image_tag 'hotate.webp'
-      .result-name
-        %h4 オホーツク産ホタテ冷大
-      .result-city
-        %p 北海道紋別市
-      .result-price
-        %p 寄付金額　20,000円
-      .result-description
-        %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
-    %li
-      .result-image
-        = image_tag 'hotate.webp'
-      .result-name
-        %h4 オホーツク産ホタテ冷大
-      .result-city
-        %p 北海道紋別市
-      .result-price
-        %p 寄付金額　20,000円
-      .result-description
-        %p 厳選した大粒のオホーツク産ホタテをたっぷり１kgお届けします。
-
+    -# - @history_detail.each do |history_detail|
+    - @history.history_detail.each do |item|
+      %li
+        = link_to item.link do
+          .result-image
+            = image_tag item.picture_image_path
+          .result-name
+            %h4
+              = item.name
+          .result-city
+            %p
+              = item.city
+          .result-price
+            %p
+              = item.price
+          .result-description
+            %p
+              = item.description
+          .result-review
+            = image_tag item.review_image_path
 
 .footer
   .link
