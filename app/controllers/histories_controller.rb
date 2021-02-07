@@ -30,7 +30,9 @@ class HistoriesController < ApplicationController
 
   def show
     @history = History.find(params[:id])
-    @history_detail = HistoryDetail.find(params[:id])
+    # @history_detail = HistoryDetail.find_by(params[:history_id])
+
+    @history_details = HistoryDetail.where(history_id: @history.id)
     income = current_user.income_id
     family = current_user.family_id
     @deduction = DeductionList.find_by(income_id: income, family_id: family)
@@ -45,21 +47,17 @@ class HistoriesController < ApplicationController
   #   @category_detail_list = CategoryDetail.where(category_id: params[:history][:category_id])
   # end
 
-  def history_detail_params
-    params.require(:history_detail).permit(:link, :name, :city, :price, :description, :picture_image_path, :review_image_path)
-  end
+  # def history_detail_params
+  #   params.require(:history_detail).permit(:link, :name, :city, :price, :description, :picture_image_path, :review_image_path)
+  # end
 
 
   def item_list
     require 'nokogiri'
     require 'open-uri'
     require 'json'
-    satofull = Category.find(@history.category_id).satofull_id
-    binding.pry
-    # メモカテゴリーの選択に応じて抽出するアドレスを選択する
-    # history→category_id→satofull_id
-    # url  = 'https://www.satofull.jp/products/list.php?cat={satofull_id}'
-    url = 'https://www.satofull.jp/products/list.php?cat=#{satofull}'
+    
+    url = 'https://www.satofull.jp/products/list.php?cat=' + Category.find(@history.category_id).satofull_id
     charset = nil
     html = open(url) do |f|
       charset = f.charset
@@ -72,7 +70,7 @@ class HistoriesController < ApplicationController
     array = []
     lists = []
   
-    nodes.css('a').first(10).each do |node|
+    nodes.css('a').first(5).each do |node|
       link = 'https://www.satofull.jp' + node[:href]
       name = node.css('.ItemList__name').text
       city = node.css('.ItemList__city').text
@@ -82,20 +80,31 @@ class HistoriesController < ApplicationController
       review_image_path = 'https://www.satofull.jp' + node.css('.ItemList__review>img').attribute('src')
       array << [link, name, city, price,description, picture_image_path, review_image_path]
     end
-    array.shuffle.each do |t|
-      lists << t
-      lists.each do |list|
-        item = HistoryDetail.new
-        item.history_id = @history.id
-        item.link = list[0]
-        item.name = list[1]
-        item.city = list[2]
-        item.price = list[3]
-        item.description = list[4]
-        item.picture_image_path = list[5]
-        item.review_image_path = list[6]
-        item.save
-      end
+    array.each do |t|
+      item = HistoryDetail.new
+      item.history_id = @history.id
+      item.link = t[0]
+      item.name = t[1]
+      item.city = t[2]
+      item.price = t[3]
+      item.description = t[4]
+      item.picture_image_path = t[5]
+      item.review_image_path = t[6]
+      item.save
     end
   end
 end
+
+    # array.shuffle.each do |t|
+    #   lists << t.first(4)
+    #   lists.each do |list|
+    #     item = HistoryDetail.new
+    #     item.history_id = @history.id
+    #     item.link = list[0]
+    #     item.name = list[1]
+    #     item.city = list[2]
+    #     item.price = list[3]
+    #     item.description = list[4]
+    #     item.picture_image_path = list[5]
+    #     item.review_image_path = list[6]
+    #     item.save

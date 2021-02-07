@@ -11,7 +11,7 @@
     %h3 結果一覧
   %ul
     -# - @history_detail.each do |history_detail|
-    - @history.history_detail.each do |item|
+    - @history_details.each do |item|
       %li
         = link_to item.link do
           .result-image
