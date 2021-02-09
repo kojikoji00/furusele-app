@@ -20,6 +20,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
+    @category_detail = @category.category_details.new(item_list)
     # @category_details = CategoryDetail.where(category_id: @category.id)
     income = current_user.income_id
     family = current_user.family_id
@@ -38,8 +39,7 @@ class CategoriesController < ApplicationController
     require 'nokogiri'
     require 'open-uri'
     require 'json'
-    
-    url = 'https://www.satofull.jp/products/list.php?cat=' + Category.find(:id).satofull_id
+    url = 'https://www.satofull.jp/products/list.php?cat=' + @category.satofull_id
     charset = nil
     html = open(url) do |f|
       charset = f.charset
@@ -50,7 +50,6 @@ class CategoriesController < ApplicationController
     nodes = doc.xpath('//ul[@class="ItemList"]')
   
     array = []
-    lists = []
   
     nodes.css('a').first(5).each do |node|
       link = 'https://www.satofull.jp' + node[:href]
@@ -62,17 +61,6 @@ class CategoriesController < ApplicationController
       review_image_path = 'https://www.satofull.jp' + node.css('.ItemList__review>img').attribute('src')
       array << [link, name, city, price,description, picture_image_path, review_image_path]
     end
-    array.each do |t|
-      # item = HistoryDetail.new
-      # item.history_id = @history.id
-      item.link = t[0]
-      item.name = t[1]
-      item.city = t[2]
-      item.price = t[3]
-      item.description = t[4]
-      item.picture_image_path = t[5]
-      item.review_image_path = t[6]
-      # item.save
-    end
+    # @item = array
   end
 end
