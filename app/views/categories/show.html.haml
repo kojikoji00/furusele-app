@@ -1,17 +1,15 @@
 
 = render 'commons/header'
-
 .deduction
   = "あなたの控除額は#{@deduction.deduction.to_s(:delimited)}円です"
--# .select-catgory
--#   = "あなたの選んだカテゴリーは#{Category.find(id: @category.id).name}です"
-
+.select-catgory
+  = "あなたの選んだカテゴリーは#{Category.find(@category.id).name}です"
+ 
 .result
   .result-title
     %h3 結果一覧
   %ul
-    -# - @history_detail.each do |history_detail|
-    - @history_details.each do |item|
+    -@item.each do |item|
       %li
         = link_to item.link do
           .result-image

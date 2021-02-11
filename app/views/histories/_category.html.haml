@@ -1,7 +1,14 @@
 = form_with(model: @history, url: histories_path) do |f|
   = f.label :category, 'カテゴリー'
+  
   .category-parent
-    = f.collection_select :category_id, Category.all, :id, :name, include_blank: '選択してください'
+    = f.collection_select :category_id, @categories, :id, :name, include_blank: '選択してください', remote: true
+
   .category-child
+    -# = f.collection_select :category_id, @category_details, :id, :name, include_blank: '選択してください', remote: true
     -# = f.collection_select :category_id, CategoryDetail.where(category_id: "5"), :id, :name
+    -# = f.collection_select :category_id, @category_detail_list, :id, :name
+    -# = f.collection_select :category_detail_id, @category_details.where(category_id: @history.category_id), :id, :name
+
+
   = f.submit '登録する', class: 'btn-primary', id: 'file-btn'
