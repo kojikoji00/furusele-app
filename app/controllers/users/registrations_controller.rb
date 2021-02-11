@@ -65,7 +65,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def after_update_path_for(resource)
-    new_history_path
+    new_category_path
   end
 
 

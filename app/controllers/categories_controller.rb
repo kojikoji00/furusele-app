@@ -1,9 +1,5 @@
 class CategoriesController < ApplicationController
 
-  # def index
-  #   @categories = Category.all
-  # end
-
   def new
     @category = Category.new
     @categories = Category.all
@@ -12,30 +8,8 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    @category = Category.new(category_params)
-    redirect_to category_path(@category)
-  end
-    # @category_detail = Category_detail.build(item_list)
-    # category_detail = CategoryDetail.new(category_detail_params)
-
-  def show
-    @category = Category.find(params[:id])
-    @category_detail = @category.category_details.new(item_list)
-    # @category_details = CategoryDetail.where(category_id: @category.id)
-    income = current_user.income_id
-    family = current_user.family_id
-    @deduction = DeductionList.find_by(income_id: income, family_id: family)
-  end
-
-  private
-  def category_params
-    params.require(:category).permit(:id)
-  end
-  def category_detail_params
-    params.require(:category_detail).permit(:category_id)
-  end
-
-  def item_list
+    category = Category.new(category_params)
+    @category = Category.find(category.id)
     require 'nokogiri'
     require 'open-uri'
     require 'json'
@@ -50,7 +24,7 @@ class CategoriesController < ApplicationController
     nodes = doc.xpath('//ul[@class="ItemList"]')
   
     array = []
-  
+
     nodes.css('a').first(5).each do |node|
       link = 'https://www.satofull.jp' + node[:href]
       name = node.css('.ItemList__name').text
@@ -61,6 +35,39 @@ class CategoriesController < ApplicationController
       review_image_path = 'https://www.satofull.jp' + node.css('.ItemList__review>img').attribute('src')
       array << [link, name, city, price,description, picture_image_path, review_image_path]
     end
-    # @item = array
+    @history = current_user.histories.create
+    array.each do |t|
+      item = @history.history_detail.new
+      item.history_id = @history.id
+      item.link = t[0]
+      item.name = t[1]
+      item.city = t[2]
+      item.price = t[3]
+      item.description = t[4]
+      item.picture_image_path = t[5]
+      item.review_image_path = t[6]
+      item.save
+    end
+    redirect_to history_path(@history)
   end
+  # @category_detail = Category_detail.build(item_list)
+  
+  # def show
+  #   @category = Category.find(params[:id])
+  #   @history = History.find(params[:id])
+  #   income = current_user.income_id
+  #   family = current_user.family_id
+  #   @deduction = DeductionList.find_by(income_id: income, family_id: family)
+  # end
+
+  private
+  def category_params
+    params.require(:category).permit(:id, :satofull_id)
+  end
+  # def category_detail_params
+  #   params.require(:category_detail).permit(:category_id)
+  # end
+
+  
+
 end

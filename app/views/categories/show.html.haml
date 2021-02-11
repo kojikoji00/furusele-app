@@ -4,31 +4,30 @@
   = "あなたの控除額は#{@deduction.deduction.to_s(:delimited)}円です"
 .select-catgory
   = "あなたの選んだカテゴリーは#{Category.find(@category.id).name}です"
-
+ 
 .result
   .result-title
     %h3 結果一覧
   %ul
-  - array.name
-    -# - @array.each do |item|
-    -#   %li
-    -#     = link_to item.link do
-    -#       .result-image
-    -#         = image_tag item.picture_image_path
-    -#       .result-name
-    -#         %h4
-    -#           = item.name
-    -#       .result-city
-    -#         %p
-    -#           = item.city
-    -#       .result-price
-    -#         %p
-    -#           = item.price
-    -#       .result-description
-    -#         %p
-    -#           = item.description
-    -#       .result-review
-    -#         = image_tag item.review_image_path
+    -@item.each do |item|
+      %li
+        = link_to item.link do
+          .result-image
+            = image_tag item.picture_image_path
+          .result-name
+            %h4
+              = item.name
+          .result-city
+            %p
+              = item.city
+          .result-price
+            %p
+              = item.price
+          .result-description
+            %p
+              = item.description
+          .result-review
+            = image_tag item.review_image_path
 
 .footer
   .link
