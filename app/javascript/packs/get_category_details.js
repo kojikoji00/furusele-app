@@ -3,17 +3,28 @@
 $(function() {
 	$('select[name="category_id"]').change(function() {
     var categoryId = $('select[name="category_id"] option:selected').attr("value");
-    var count = $('select[name="category_detail_id"]').children().length;
-    debugger
-    const categoryDetails = gon.category_details.filter( cat => cat.category_id == categoryId );
-// ↑ここまでOK
-
-    var categoryDetail = []
-    $.each(categoryDetails, function(){
-      categoryDetail.push($(this));
-    });
+    var categoryDetails = gon.category_details.filter( cat => cat.category_id == categoryId );
+    var count =  $('select[name="category_detail_id"]').children().length;
+    for (var i=0; i<count; i++) {
+      var categoryDetail = $('select[name="category_detail_id"] option:eq(' + i + ')');
+      var a = gon.category_details.filter( cat => cat.id == Number(categoryDetail.attr('value')));
+      if($(a).attr('category_id') === $(categoryDetails).attr("category_id")){
+        categoryDetail.show();
+      }else{
+        if(categoryDetail.attr("value") === "msg"){
+          categoryDetail.show();
+          categoryDetail.prop('selected', true);
+        }else{
+          categoryDetail.hide();
+        }
+      }
+    }
 	})
 })
+// var categoryDetail = []
+// $.each(categoryDetails, function(){
+//   categoryDetail.push($(this));
+// });
 
 // document.addEventListener('DOMContentLoaded', () => {
 
