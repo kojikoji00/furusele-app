@@ -3,8 +3,7 @@
 .category
   .category-title
     %h3 カテゴリーを１〜３つ選択してください
-  .category-select-first
-    = render 'category'
+  = render 'category'
   -# .category-select-second
   -#   = render 'category'
   -# .category-select-third
@@ -12,4 +11,4 @@
 
 = link_to '結果ページへ', history_path(id: current_user.id)
 
-= javascript_pack_tag 'history'
+= javascript_pack_tag 'category'

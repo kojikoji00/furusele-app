@@ -1,0 +1,25 @@
+.category-select
+  -# = form_with(model: @category, url: categories_path) do |f|
+  -#   = f.label :category, 'カテゴリー'
+  -#   .category-parent
+  -#     = f.collection_select :id, @categories, :id, :name, include_blank: '選択してください', remote: true
+  -#   = f.submit '登録する', class: 'btn-primary', id: 'file-btn'
+.category-select
+  .category-parent
+    = select_tag :category_id, options_from_collection_for_select(Category.all, :id, :name)
+  .category-child
+    = select_tag :category_detail_id, options_from_collection_for_select(CategoryDetail.all, :id, :name)
+
+
+  -# .category-child
+  -#   = form_with(model: @category_detail, url: category_category_details_path(category_id: @category.id)) do |f|
+  -#     = f.label :category_detail
+  -#     = f.collection_select :id, @category_details, :id, :name, include_blank: '選択してください', remote: true
+  -#     = f.submit '登録する', class: 'btn-primary', id: 'file-btn'
+    -# = f.collection_select :category_id, CategoryDetail.where(category_id: "5"), :id, :name
+    -# = f.collection_select :category_id, @category_detail_list, :id, :name
+    -# = f.collection_select :category_detail_id, @category_details.where(category_id: @history.category_id), :id, :name
+
+
+
+  = javascript_pack_tag 'get_category_details'

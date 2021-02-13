@@ -1,15 +1,19 @@
 class CategoriesController < ApplicationController
 
   def new
-    @category = Category.new
     @categories = Category.all
-    # @category_detail = CategoryDetails.new
-    @category_details = CategoryDetail.all
+    gon.category_details = CategoryDetail.all
+    # @category_details = CategoryDetail.where(category_id: params[:category_id])
+    # binding.pry
+    # @category = Category.new
+    # @category_detail = @category.category_details.new
   end
 
   def create
     category = Category.new(category_params)
     @category = Category.find(category.id)
+    @category_details = CategoryDetrail.where(category_id: params[:category_id])
+    # @category_detail = @category.category_details.new(category_detail_params)
     require 'nokogiri'
     require 'open-uri'
     require 'json'
@@ -59,15 +63,17 @@ class CategoriesController < ApplicationController
   #   family = current_user.family_id
   #   @deduction = DeductionList.find_by(income_id: income, family_id: family)
   # end
+  def get_category_details
+    # @category_details = CategoryDetrail.where(category_id: params[:category_id])
+    @category_details = CategoryDetrail.all
+  end
 
   private
   def category_params
     params.require(:category).permit(:id, :satofull_id)
   end
-  # def category_detail_params
-  #   params.require(:category_detail).permit(:category_id)
-  # end
 
-  
-
+  def category_detail_params
+    params.require(:category_detail).permit(:id, :category_id)
+  end
 end
