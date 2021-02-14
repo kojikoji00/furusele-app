@@ -10,14 +10,17 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    category = Category.new(category_params)
-    @category = Category.find(category.id)
-    @category_details = CategoryDetrail.where(category_id: params[:category_id])
-    # @category_detail = @category.category_details.new(category_detail_params)
+    # category = Category.new(category_params)
+    # @category = Category.find(category.id)
+    # @category_details = CategoryDetrail.where(category_id: params[:category_id])
+    binding.pry
+    @category_detail = Category_detail.new(id: params[:id])
+    render json: @category_detail
+
     require 'nokogiri'
     require 'open-uri'
     require 'json'
-    url = 'https://www.satofull.jp/products/list.php?cat=' + @category.satofull_id
+    url = 'https://www.satofull.jp/products/list.php?cat=' + @category_detail.satofull_id
     charset = nil
     html = open(url) do |f|
       charset = f.charset
@@ -53,19 +56,6 @@ class CategoriesController < ApplicationController
       item.save
     end
     redirect_to history_path(@history)
-  end
-  # @category_detail = Category_detail.build(item_list)
-  
-  # def show
-  #   @category = Category.find(params[:id])
-  #   @history = History.find(params[:id])
-  #   income = current_user.income_id
-  #   family = current_user.family_id
-  #   @deduction = DeductionList.find_by(income_id: income, family_id: family)
-  # end
-  def get_category_details
-    # @category_details = CategoryDetrail.where(category_id: params[:category_id])
-    @category_details = CategoryDetrail.all
   end
 
   private

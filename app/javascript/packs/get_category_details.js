@@ -19,34 +19,26 @@ $(function() {
         }
       }
     }
-	})
+  })
+  $('select[name="category_detail_id"]').change(function() {
+    var categoryDetailId = $('select[name="category_detail_id"] option:selected').attr("value");
+    var selectCategoryDetail = gon.category_details.filter( cat => cat.id == Number(categoryDetailId));
+    $('#file-btn').click(function(){
+      $.ajax({
+        type: "post",
+        url: "/categories/new",
+        dataType: "json",
+        data: {
+          id: $(selectCategoryDetail).attr('id')
+        },
+        timeout: 10000,
+        success: function(data) {
+          alert("success");
+        },
+        error: function(data) {
+          alert("error");
+        }
+      })
+    })
+  })
 })
-// var categoryDetail = []
-// $.each(categoryDetails, function(){
-//   categoryDetail.push($(this));
-// });
-
-// document.addEventListener('DOMContentLoaded', () => {
-
-//   // $('#category_id').change(function() {
-//   //   $.get({
-//   //     url: "#{new_category_path}",
-//   //     data: {category_id: $('#category_id').has('option:selected').val() }
-//   //   });
-//   //   var count = $('#category_detail_id').children().length;
-//   //   for(var)
-
-//     // debugger
-//     // $('#category_detail_id').html('<%= j(options_from_collection_for_select(@category_details.pluck(:id, :name))) %>');
-//   });
-
-// });
-//   //   debugger
-//   //   const categoryParentId = $(this).val();
-//   //   // const words = @catergories
-//   //   // debugger
-//   //   // const result = words.filter(word => word.id == categoryParentId);
-//   //   $('.category-child').append(
-//   //     // `<%= f.collection_select :category_id, CategoryDetail.where(category_id: categoryParentId), :id, :name %>`
-//   //     `<%= f.collection_select :category_id, @category_detail.where(category_id: categoryParentId), :id, :name %>`
-//       // `<%= f.collection_select :category_id, options_from_collection_for_select(@category_list, :id, :name) %>`
