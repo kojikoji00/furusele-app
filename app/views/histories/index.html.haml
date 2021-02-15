@@ -1,1 +1,25 @@
-= @histories
+
+= render 'commons/header'
+.history-title
+  %h3 あなたが選んだ商品
+.history-list
+  -@histories.limit(5).each do |history|
+    = history.created_at.strftime('%Y/%m/%d')
+    %ul.history_detail-list
+      - history.history_detail.each do |item|
+        %li
+          = link_to item.link do
+            .result-image
+              = image_tag item.picture_image_path
+            .result-name
+              %p
+                = item.name
+            .result-city
+              %p
+                = item.city
+            .result-price
+              %p
+                = item.price
+            .result-description
+            .result-review
+              = image_tag item.review_image_path

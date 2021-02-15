@@ -35,6 +35,7 @@ gem 'activerecord-import'
 gem 'nokogiri'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'gon'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

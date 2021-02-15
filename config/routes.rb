@@ -9,6 +9,5 @@ Rails.application.routes.draw do
   resources :histories, only: %i[index new show create] do
     resources :history_details, only: %i[index]
   end
-  match 'category_list', to: 'histories#category_list', via: [:get, :post]
   resources :users, only: %i[new show create edit update]
 end

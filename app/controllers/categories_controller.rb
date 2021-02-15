@@ -1,19 +1,26 @@
 class CategoriesController < ApplicationController
 
   def new
-    @category = Category.new
     @categories = Category.all
-    # @category_detail = CategoryDetails.new
-    @category_details = CategoryDetail.all
+    gon.category_details = CategoryDetail.all
+    # @category_details = CategoryDetail.where(category_id: params[:category_id])
+    # binding.pry
+    # @category = Category.new
+    # @category_detail = @category.category_details.new
   end
 
   def create
-    category = Category.new(category_params)
-    @category = Category.find(category.id)
+    # category = Category.new(category_params)
+    # @category = Category.find(category.id)
+    # @category_details = CategoryDetrail.where(category_id: params[:category_id])
+    binding.pry
+    @category_detail = Category_detail.new(id: params[:id])
+    render json: @category_detail
+
     require 'nokogiri'
     require 'open-uri'
     require 'json'
-    url = 'https://www.satofull.jp/products/list.php?cat=' + @category.satofull_id
+    url = 'https://www.satofull.jp/products/list.php?cat=' + @category_detail.satofull_id
     charset = nil
     html = open(url) do |f|
       charset = f.charset
@@ -50,24 +57,13 @@ class CategoriesController < ApplicationController
     end
     redirect_to history_path(@history)
   end
-  # @category_detail = Category_detail.build(item_list)
-  
-  # def show
-  #   @category = Category.find(params[:id])
-  #   @history = History.find(params[:id])
-  #   income = current_user.income_id
-  #   family = current_user.family_id
-  #   @deduction = DeductionList.find_by(income_id: income, family_id: family)
-  # end
 
   private
-  def category_params
-    params.require(:category).permit(:id, :satofull_id)
-  end
-  # def category_detail_params
-  #   params.require(:category_detail).permit(:category_id)
+  # def category_params
+  #   params.require(:category).permit(:id, :satofull_id)
   # end
 
-  
-
+  # def category_detail_params
+  #   params.require(:category_detail).permit(:id, :category_id)
+  # end
 end

@@ -1,0 +1,29 @@
+.history-title{
+  h3 {font-size: 25px;}
+  margin: 0 20px;
+}
+
+.history-list {
+  margin: 0 20px;
+  ul.history_detail-list {
+    text-align: center;
+    clear: both;
+    margin-bottom: 20px;
+    h3 {font-size: 25px;}
+    h4 {font-size: 16px;}
+    p {font-size: 12px;}
+    li{
+      width: 150px;
+      padding: 20px;
+      float: left;
+      list-style: none;
+      margin-bottom: 40px;
+      .result-image{
+        margin-bottom: 10px;
+        img{
+          width: 150px;
+        }
+      }
+    }
+  }
+}

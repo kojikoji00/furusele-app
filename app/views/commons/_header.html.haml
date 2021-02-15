@@ -3,20 +3,20 @@
     .inner
       %ul.nav
         %li
-          - if current_page?(root_path)
-            - if user_signed_in?
-              = link_to 'ログアウト', destroy_user_session_path, data: {method: 'delete' }
-            - else
-              = link_to 'ログイン', new_user_session_path
+          -# - if current_page?(root_path)
+          - if user_signed_in?
+            = link_to 'ログアウト', destroy_user_session_path, data: {method: 'delete' }
+          - else
+            = link_to 'ログイン', new_user_session_path
         %li
-          %a{:href => "#"} 商品検索
+          = link_to '商品検索', new_category_path
         %li
           - if user_signed_in?
             = link_to 'マイページ', histories_path
           - else
             = link_to '会員登録', new_user_registration_path
-        %li
-          %a{:href => "#"} ふるさと
+        -# %li
+        -#   = link_to 'ふるさと', "#"
       .header-main-tagline
         %p ふるさと納税の商品を選ぶなら
   .header-title

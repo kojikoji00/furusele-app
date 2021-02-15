@@ -1,9 +1,7 @@
 class HistoryDetailsController < ApplicationController
   def index
-    binding.pry
-    
-    @history = History.find(params[:id])
-    history_details = @history.history_details
+    # @history = History.find(params[:id])
+    # history_details = @history.history_details
   end
 
   # def new
@@ -17,7 +15,7 @@ class HistoryDetailsController < ApplicationController
   # end
 
   private
-  def history_detail_params
-    params.require(:history_detail).permit(:link, :name, :city, :price, :description, :picture_image_path, :review_image_path)
-  end
+  # def history_detail_params
+  #   params.require(:history_detail).permit(:link, :name, :city, :price, :description, :picture_image_path, :review_image_path)
+  # end
 end
