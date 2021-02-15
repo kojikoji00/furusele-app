@@ -1,5 +1,5 @@
 .history-title{
-  h3 {font-size: 25px;}
+  h3 {font-size: 26px;}
   margin: 0 20px;
 }
 
@@ -21,7 +21,8 @@
       .result-image{
         margin-bottom: 10px;
         img{
-          width: 150px;
+          height: 170px;
+          object-fit: cover;
         }
       }
     }

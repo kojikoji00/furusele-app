@@ -8,15 +8,22 @@ a{
 .footer {
   margin: 20px;
   margin-top: 50px;
+  clear: both;
+  h4{
+    font-size: 20px;
+    clear: both;
+  }
   .link {
     &-twitter{
-      float: left;
+      float: right;
       text-align: center;
     }
     ul{
       float: right;
       li{
         margin: 10px;
+        list-style: none;
+        float: left;
         img{
           height: 45px;
         }

@@ -1,5 +1,8 @@
 
 = render 'commons/header'
+%h3.deduction
+  = "控除額：#{@deduction.deduction.to_s(:delimited)}円"
+
 .history-title
   %h3 あなたが選んだ商品
 .history-list
@@ -19,7 +22,28 @@
                 = item.city
             .result-price
               %p
-                = item.price
+                = item.price.to_s
             .result-description
             .result-review
               = image_tag item.review_image_path
+
+.footer
+  .link
+    .link-twitter
+      %i.fab.fa-twitter-square.fa-3x
+      %p 共有しよう！
+    %h4 他にも気になる商品があればリンク先から検索してみてください。
+    %ul
+      %li
+        = link_to 'https://www.satofull.jp/' do
+          .link-title
+            %h1 さ
+          .link-comment
+            %p さとふる
+      %li
+        = link_to 'https://event.rakuten.co.jp/furusato/' do
+          .link-image
+            = image_tag 'rakuten.png'
+          .link-comment
+            %p 楽天ふるさと納税
+

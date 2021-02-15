@@ -25,6 +25,15 @@ select{
     padding: 36px 20px;
     background: $back-ground-color;
     font-size: $text-size;
+    select{
+      height: 42px;
+      margin-bottom: 20px;
+      width: 680px;
+    }
+  }
+  p{
+    margin-top: 10px;
+    font-size: 15px;
   }
 }
 
@@ -38,17 +47,21 @@ select{
     font-weight: bold;
     color: #fff;
   }
+  h3{
+    font-size: 22px;
+    margin-left: 5px;
+  }
   select {
     margin: 5px;
+    width: 600px;
+    height: 35px;
+    margin-bottom: 10px;
   }
 }
 
-.personal {
-  &-form-group{
-    select{
-      margin-bottom: 20px;
-    }
-  }
-}
+// .personal {
+//   &-form-group{
+//   }
+// }
 
 

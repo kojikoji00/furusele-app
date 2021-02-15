@@ -16,9 +16,9 @@
           = f.label :family, '家族構成'
           %br/
           = f.collection_select :family_id, Family.all, :id, :family_member
-        .personal-form-group-action
+        .personal-form-group-btn
           = f.submit '登録する', class: 'btn-primary', id: 'file-btn'
-
+      %p ＊算出される金額はあくまで目安であり、正確な計算は寄付翌年1月～2月にお住まいの市町村にお尋ねください。
       -# .field
       -#   = f.label :email
       -#   %br/

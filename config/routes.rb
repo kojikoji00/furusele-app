@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'users/registrations', sessions: 'users/sessions'}
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: 'top#index'
+  resource :top, only: %i[show]
   resource :deduction_list, only: %i[show]
   resources :categories, only: %i[new create show] do
     resources :category_details, only: %i[new create show]
