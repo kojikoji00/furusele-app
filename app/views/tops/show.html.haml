@@ -1,39 +1,5 @@
 = render 'commons/header'
 
-.previews
-  .slider
-    = image_tag 'furusato.jpg'
-    = image_tag 'farmer.jpg'
-    = image_tag 'ikura.jpg'
-    = image_tag 'rice.jpg'
-    = image_tag 'vegetables.jpg'
-    = image_tag 'crab.jpg'
-    = image_tag 'strawberry.jpg'
-    = image_tag 'pork.jpg'
-    = image_tag 'beaf.jpg'
-
-
-
-.explanation
-  .explanation.title
-    %h3
-      %span.under> 「ふるセレ」
-      とは
-
-  .explanation-content
-    %p
-      たった一分で、あなたのふるさと納税の商品を選びます。
-      %br/
-      忙しくて時間がない
-      初めてで何を選んだら良いかわからない方は
-      %br/
-      %br/
-      ぜひお試しください！
-      %br/
-      .button
-        -# = link_to '試してみる', new_select_path, class: 'btn secondary'
-        = link_to '試してみる', edit_user_registration_path, class: 'btn secondary'
-
 .explanation
   .explanation.title
     %h3
@@ -44,12 +10,15 @@
   .explanation-content
     = image_tag 'furusato_nouzei.png'
     %p
-      実質2,000円の負担で、各地の美味しい名産品がもらえちゃいます！
+      実質2,000円の負担で、各地の美味しい名産品がもらえます！
       %br/
       %br/
       税金の控除もあってお得だし、ワンストップ特例申請制度を使えば確定申告もいりません。
       %br/
       この機会にぜひやってみましょう！
+      %br
+      %br
+      詳しい内容は各自治体のHPまたはふるさと納税支援サイトをご確認ください。
 
 
 
@@ -110,13 +79,9 @@
       %dt 申請
       %dd ワンストップ申請書で控除手続きをする
       %br/
-%p これだけ！
-
+%br/
 .button
-  = link_to 'まずは商品を選んでみる', edit_user_registration_path, class: 'btn secondary'
-%br/
-%br/
-
+  = link_to '試してみる', edit_user_registration_path, class: 'btn secondary'
 .btn.primary
   = link_to '会員登録', new_user_registration_path, class: 'link-btn'
   %br/
@@ -129,5 +94,3 @@
   %p 会員登録済みの方はこちら
   %br/
   %br/
-
-= javascript_pack_tag 'top'

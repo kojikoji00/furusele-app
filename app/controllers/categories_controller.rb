@@ -3,6 +3,9 @@ class CategoriesController < ApplicationController
   def new
     @categories = Category.all
     gon.category_details = CategoryDetail.all
+    income = current_user.income_id
+    family = current_user.family_id
+    @deduction = DeductionList.find_by(income_id: income, family_id: family)
     # @category_details = CategoryDetail.where(category_id: params[:category_id])
     # binding.pry
     # @category = Category.new
