@@ -1,0 +1,16 @@
+{
+  "name": "furusele app",
+  "description": "This is furusele-app",
+  "keywords": [],
+  "website": "",
+  "repository": "git@github.com:kojikoji00/furusele-app.git",
+  "env": {},
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "buildpacks": [{
+    "url": "heroku/nodejs"
+  }, {
+    "url": "heroku/ruby"
+  }]
+}
