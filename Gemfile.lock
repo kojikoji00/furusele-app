@@ -150,6 +150,7 @@ GEM
       i18n (>= 0.7)
       multi_json
       request_store (>= 1.0)
+    google-analytics-rails (1.1.1)
     haml (5.2.1)
       temple (>= 0.8.0)
       tilt
@@ -371,6 +372,7 @@ DEPENDENCIES
   factory_bot_rails
   faker
   gon
+  google-analytics-rails
   hamlit
   jbuilder (~> 2.7)
   listen (~> 3.2)

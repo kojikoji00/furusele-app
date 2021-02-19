@@ -35,6 +35,7 @@ gem 'nokogiri'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'gon'
+gem 'google-analytics-rails'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
