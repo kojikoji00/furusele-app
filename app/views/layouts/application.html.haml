@@ -15,6 +15,7 @@
 
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     %script{:crossorigin => "anonymous", :src => "https://kit.fontawesome.com/6d7c996bbb.js"}
+    = analytics_init if Rails.env.production?
 
   %body
   %body{:text => "#333333"}
