@@ -9,7 +9,7 @@
           - else
             = link_to 'ログイン', new_user_session_path
         %li
-          = link_to '商品検索', new_category_path
+          = link_to '商品を選ぶ', new_category_path
         %li
           - if user_signed_in?
             = link_to 'マイページ', histories_path
@@ -29,7 +29,7 @@
   -#       = image_tag 'wakaba.png'
   -#     .header_explanation_title
   -#       %p ふるさと納税とは
-= javascript_pack_tag 'top'
+-# = javascript_pack_tag 'top'
 
 
 

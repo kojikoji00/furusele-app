@@ -6,20 +6,11 @@ class CategoriesController < ApplicationController
     income = current_user.income_id
     family = current_user.family_id
     @deduction = DeductionList.find_by(income_id: income, family_id: family)
-    # @category_details = CategoryDetail.where(category_id: params[:category_id])
-    # binding.pry
-    # @category = Category.new
-    # @category_detail = @category.category_details.new
   end
 
   def create
-    # category = Category.new(category_params)
-    # @category = Category.find(category.id)
-    # @category_details = CategoryDetrail.where(category_id: params[:category_id])
-    binding.pry
-    @category_detail = Category_detail.new(id: params[:id])
-    render json: @category_detail
-
+    category_detail = CategoryDetail.new(id: params[:category_detail_id])
+    @category_detail = CategoryDetail.where(id: category_detail.id).first
     require 'nokogiri'
     require 'open-uri'
     require 'json'
@@ -57,6 +48,7 @@ class CategoriesController < ApplicationController
       item.picture_image_path = t[5]
       item.review_image_path = t[6]
       item.save
+      binding.pry
     end
     redirect_to history_path(@history)
   end
