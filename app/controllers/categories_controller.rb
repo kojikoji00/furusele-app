@@ -9,12 +9,17 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    category_detail = CategoryDetail.new(id: params[:category_detail_id])
-    @category_detail = CategoryDetail.where(id: category_detail.id).first
+    category_detail_first = CategoryDetail.new(id: params[:category_detail_id_first])
+    @category_detail_first = CategoryDetail.where(id: category_detail_first.id).first
+    category_detail_second = CategoryDetail.new(id: params[:category_detail_id_second])
+    @category_detail_second = CategoryDetail.where(id: category_detail_second.id).first
+    category_detail_third = CategoryDetail.new(id: params[:category_detail_id_third])
+    @category_detail_third = CategoryDetail.where(id: category_detail_third.id).first
     require 'nokogiri'
     require 'open-uri'
     require 'json'
-    url = 'https://www.satofull.jp/products/list.php?cat=' + @category_detail.satofull_id
+    binding.pry
+    url = 'https://www.satofull.jp/products/list.php?cat=' + category_first + category_second + category_third
     charset = nil
     html = open(url) do |f|
       charset = f.charset
@@ -48,11 +53,31 @@ class CategoriesController < ApplicationController
       item.picture_image_path = t[5]
       item.review_image_path = t[6]
       item.save
-      binding.pry
     end
     redirect_to history_path(@history)
   end
-
+  
+  def category_first
+    if @category_detail_first.nil?
+      " "
+    else
+      @category_detail_first.satofull_id + ','
+    end
+  end
+  def category_second
+    if @category_detail_second.nil?
+      " "
+    else
+      @category_detail_second.satofull_id + ','
+    end
+  end
+  def category_third
+    if @category_detail_third.nil?
+      " "
+    else
+      @category_detail_third.satofull_id
+    end
+  end
   private
   # def category_params
   #   params.require(:category).permit(:id, :satofull_id)

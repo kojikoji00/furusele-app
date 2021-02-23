@@ -6,8 +6,19 @@
   .category-title
     %h3 カテゴリーを１〜３つ選択してください
   .category-select
-    .first
+    = form_with(model: @category_detail, url: "/categories", method: 'post') do |f|
       = render 'category'
+      -# .second
+      -#   = render 'category'
+      -# .third
+      -#   = render 'category'
+      = submit_tag '登録する', class: 'btn-primary', id: 'file-btn'
+-# .category
+-#   .category-title
+-#     %h3 カテゴリーを１〜３つ選択してください
+-#   .category-select
+-#     .first
+-#       = render 'category'
     -# .second
     -#   = render 'category'
     -# .third

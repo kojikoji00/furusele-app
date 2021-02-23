@@ -4,6 +4,7 @@ class CreateDeductionLists < ActiveRecord::Migration[6.0]
       t.integer :income_id
       t.integer :family_id
       t.integer :deduction
+      t.integer :deduction_id
       t.timestamps
     end
   end

@@ -24,7 +24,7 @@ end
 deduction_lists_csv = CSV.readlines("db/deduction_list.csv")
 deduction_lists_csv.shift
 deduction_lists_csv.each do |deduction_row|
-  DeductionList.create(id: deduction_row[0], family_id: deduction_row[1], income_id: deduction_row[2], deduction: deduction_row[3])
+  DeductionList.create(id: deduction_row[0], family_id: deduction_row[1], income_id: deduction_row[2], deduction: deduction_row[3], deduction_id: deduction_row[4])
 end
 
 income_csv = CSV.readlines("db/income.csv")
