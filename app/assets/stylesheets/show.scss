@@ -224,8 +224,10 @@ $base-color: #e74c3c;
   p{
     font-size: $text-size;
     margin-bottom: 5px;
+    font-weight: bold;
   }
   i{
+    margin-top: 20px;
     font-size: 30px;
   }
 }

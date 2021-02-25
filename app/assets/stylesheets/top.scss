@@ -47,6 +47,7 @@ select{
   }
   &-parent{
     float: left;
+    clear: both;
   }
   &-title{
     background-color: $base-color;

@@ -12,6 +12,12 @@ class CategoriesController < ApplicationController
     income = current_user.income_id
     family = current_user.family_id
     @deduction = DeductionList.find_by(income_id: income, family_id: family)
+    category_first = Category.new(id: params[:category_id_first])
+    @category_first = Category.where(id: category_first.id).first
+    category_second = Category.new(id: params[:category_id_second])
+    @category_second = Category.where(id: category_second.id).first
+    category_third = Category.new(id: params[:category_id_third])
+    @category_third = Category.where(id: category_third.id).first
     category_detail_first = CategoryDetail.new(id: params[:category_detail_id_first])
     @category_detail_first = CategoryDetail.where(id: category_detail_first.id).first
     category_detail_second = CategoryDetail.new(id: params[:category_detail_id_second])
@@ -21,7 +27,7 @@ class CategoriesController < ApplicationController
     require 'nokogiri'
     require 'open-uri'
     require 'json'
-    url = 'https://www.satofull.jp/products/list.php?cat=' + category_first + category_second + category_third + '&pri=' +@deduction.deduction_id.to_s
+    url = 'https://www.satofull.jp/products/list.php?cat=' + category_select_first + category_select_second + category_select_third + '&pri=' +@deduction.deduction_id.to_s
     charset = nil
     html = open(url) do |f|
       charset = f.charset
@@ -59,23 +65,35 @@ class CategoriesController < ApplicationController
     redirect_to history_path(@history)
   end
   
-  def category_first
+  def category_select_first
     if @category_detail_first.nil?
-      " "
+      if @category_first.nil?
+        " "
+      else
+        @category_first.satofull_id + ','
+      end
     else
       @category_detail_first.satofull_id + ','
     end
   end
-  def category_second
+  def category_select_second
     if @category_detail_second.nil?
-      " "
+      if @category_second.nil?
+        " "
+      else
+        @category_second.satofull_id + ','
+      end
     else
       @category_detail_second.satofull_id + ','
     end
   end
-  def category_third
+  def category_select_third
     if @category_detail_third.nil?
-      " "
+      if @category_third.nil?
+        " "
+      else
+        @category_third.satofull_id
+      end
     else
       @category_detail_third.satofull_id
     end
