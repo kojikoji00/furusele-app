@@ -41,6 +41,13 @@ select{
   margin: 50px 30px;
   clear: both;
   border: 3px solid $base-color;
+  &-select{
+    background-color: #ffffdf;
+    padding: 10px 20px;
+  }
+  &-parent{
+    float: left;
+  }
   &-title{
     background-color: $base-color;
     font-size: $text-size;
@@ -53,7 +60,7 @@ select{
   }
   select {
     margin: 5px;
-    width: 600px;
+    width: 420px;
     height: 35px;
     margin-bottom: 10px;
   }

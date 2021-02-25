@@ -15,23 +15,44 @@
 .explanation
   .explanation.title
     %h3
-      %span.under> 「ふるセレ」
+      %span.under> 「ふるセレ（ふるさとセレクト）」
       とは
 
   .explanation-content
-    %p
-      たった一分で、あなたのふるさと納税の商品を選びます。
+    .explanation-character
+      =image_tag 'fulltan.png'
+      %p ふるたん
+    %p ふるセレとは、ふるさと納税支援サイトです。
+    %p 簡単な操作で、あなたのふるさと納税の商品を選びます。
+    %p 忙しくて時間がない、初めてで何を選んだら良いかわからない方はぜひお試しください！
+    %br/
+    %br/
+    %br/
+.sample
+  %p
+    ①年収・家族構成を入力
+  .personal-image
+    =image_tag 'sample_personal_image.png'
+    %br/
+  %p
+    ②カテゴリーを選ぶ
+    %br/
+    「いくら」と「明太子・たらこ」を選択し登録
+    .category-image
+      =image_tag 'sample_category.png'
+    %br/
+  %p
+    %br/
+    ③選択したカテゴリーに該当する商品を表示
+    .history-image
+      = image_tag 'ikura.jpg'
+      = image_tag 'sample_mentaiko.jpg'
+    %br/
+    .icon
+      %i.fas.fa-angle-double-down
+    .button
+      = link_to '試してみる', edit_user_registration_path, class: 'btn secondary'
       %br/
-      忙しくて時間がない、初めてで何を選んだら良いかわからない方はぜひお試しください！
-      %br/
-      %br/
-      カテゴリーを３つ選ぶ
-      %br/
-      ・牛肉（精肉）・ビール・いちご　→　商品表示　画面コピー貼る
-      %br/
-      .button
-        = link_to '試してみる', edit_user_registration_path, class: 'btn secondary'
-        %br/
 
 
 

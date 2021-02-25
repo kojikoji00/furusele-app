@@ -11,10 +11,10 @@
   .explanation-content
     = image_tag 'furusato_nouzei.png'
     %p
-      実質2,000円の負担で、各地の美味しい名産品がもらえます！
+      実質2,000円の負担で、各地の名産品がもらえます！
       %br/
       %br/
-      税金の控除もあってお得だし、ワンストップ特例申請制度を使えば確定申告もいりません。
+      税金の控除もあってお得で、ワンストップ特例申請制度を使えば確定申告もいりません。
       %br/
       この機会にぜひやってみましょう！
       %br
@@ -31,6 +31,7 @@
       ふるさと納税の
       %span.under> ポイント
   .charm-content
+    =image_tag 'fulltan.png'
     %ul
       %li
         .charm-item-title
@@ -50,6 +51,7 @@
         .charm-item-text
           %p
           応援した地域の特産品などが届く
+
 
 .step.title
   %h3
@@ -81,7 +83,12 @@
       %dt 申請
       %dd ワンストップ申請書で控除手続きをする
       %br/
-%br/
+.comment
+  %p たったこれだけ！ ステップ１・２はふるセレでできちゃいます！
+  %p ステップ３もふるセレで選んだ商品のリンク先から購入するだけでとっても簡単です。
+  %p ぜひお試しください！
+  %i.fas.fa-angle-double-down
+
 .button
   = link_to '試してみる', edit_user_registration_path, class: 'btn secondary'
 .btn.primary

@@ -7,17 +7,13 @@
     = select_tag :category_detail_id_first, options_from_collection_for_select(CategoryDetail.all, :id, :name), prompt: '選択してください', remote: true
 .second
   .category-parent
-    %h3 カテゴリー
     = select_tag :category_id, options_from_collection_for_select(Category.all, :id, :name), prompt: '選択してください', remote: true
   .category-child
-    %h3 サブカテゴリー
     = select_tag :category_detail_id_second, options_from_collection_for_select(CategoryDetail.all, :id, :name), prompt: '選択してください', remote: true
 .third
   .category-parent
-    %h3 カテゴリー
     = select_tag :category_id, options_from_collection_for_select(Category.all, :id, :name), prompt: '選択してください', remote: true
   .category-child
-    %h3 サブカテゴリー
     = select_tag :category_detail_id_third, options_from_collection_for_select(CategoryDetail.all, :id, :name), prompt: '選択してください', remote: true
 -#   = select_tag :category_id, options_from_collection_for_select(Category.all, :id, :name), prompt: '選択してください', remote: true
 -# .category-child

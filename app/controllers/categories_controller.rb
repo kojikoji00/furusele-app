@@ -9,6 +9,9 @@ class CategoriesController < ApplicationController
   end
 
   def create
+    income = current_user.income_id
+    family = current_user.family_id
+    @deduction = DeductionList.find_by(income_id: income, family_id: family)
     category_detail_first = CategoryDetail.new(id: params[:category_detail_id_first])
     @category_detail_first = CategoryDetail.where(id: category_detail_first.id).first
     category_detail_second = CategoryDetail.new(id: params[:category_detail_id_second])
@@ -18,8 +21,7 @@ class CategoriesController < ApplicationController
     require 'nokogiri'
     require 'open-uri'
     require 'json'
-    binding.pry
-    url = 'https://www.satofull.jp/products/list.php?cat=' + category_first + category_second + category_third
+    url = 'https://www.satofull.jp/products/list.php?cat=' + category_first + category_second + category_third + '&pri=' +@deduction.deduction_id.to_s
     charset = nil
     html = open(url) do |f|
       charset = f.charset

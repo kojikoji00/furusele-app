@@ -2,7 +2,7 @@
 = render 'commons/header'
 
 .deduction
-  = "あなたの控除額は#{@deduction.deduction.to_s(:delimited)}円です"
+  = "控除額：#{@deduction.deduction.to_s(:delimited)}円"
 -# .select-catgory
 -#   = "あなたの選んだカテゴリーは#{Category.find(id: @category.id).name}です"
 
