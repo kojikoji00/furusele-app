@@ -1,5 +1,7 @@
 = render 'commons/header'
 
+
+
 .previews
   %h3 「ふるセレ」はふるさと納税支援サイトです
   .slider
@@ -52,7 +54,10 @@
     .icon
       %i.fas.fa-angle-double-down
     .button
-      = link_to '試してみる', edit_user_registration_path, class: 'btn secondary'
+      - if user_signed_in?
+        = link_to '試してみる', edit_user_registration_path, class: 'btn secondary'
+      - else
+        = link_to 'ログイン', edit_user_registration_path, class: 'btn secondary'
       %br/
 
 
@@ -65,14 +70,15 @@
 = link_to 'ふるさと納税について詳しく知る', tops_path, class: 'link-btn'
 %br/
 %br/
-= link_to '会員登録', new_user_registration_path, class: 'link-btn'
-%p 会員登録でできること
-%p 　①過去の選択履歴が確認できる
-%p 　②より細かいカテゴリー選択ができる（サブカテゴリー追加）
-%p 　②複数のカテゴリーで商品検索できる
-%br/
-= link_to 'ログイン', new_user_session_path, class: 'link-btn'
-%p 会員登録済みの方はこちら
+- unless user_signed_in?
+  = link_to '会員登録', new_user_registration_path, class: 'link-btn'
+  %p 会員登録でできること
+  %p 　①過去の選択履歴が確認できる
+  %p 　②より細かいカテゴリー選択ができる（サブカテゴリー追加）
+  %p 　②複数のカテゴリーで商品検索できる
+  %br/
+  = link_to 'ログイン', new_user_session_path, class: 'link-btn'
+  %p 会員登録済みの方はこちら
 
 = render 'commons/footer'
 

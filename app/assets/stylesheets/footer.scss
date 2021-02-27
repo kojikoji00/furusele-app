@@ -5,9 +5,6 @@ a{
   color: $text-color
 }
 
-// .footer {
-//   margin: 20px;
-//   margin-top: 50px;
 .link {
   clear: both;
   ul{
@@ -38,6 +35,28 @@ a{
     .footer-btn{
       color: white;
     }
+    .footer-btm:hover{
+      opacity: 0.6;
+    }
   }
 }
-// }
+
+.privacy, .term {
+  padding: 40px;
+  h1{
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  h2{
+    font-size: 30px;
+  }
+  h3{
+    margin-top: 10px;
+  }
+  .back {
+    text-align: right;
+  }
+  .back:hover {
+    opacity: 0.6;
+  }
+}

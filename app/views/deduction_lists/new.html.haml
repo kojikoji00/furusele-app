@@ -12,7 +12,6 @@
           = f.label :income, '年収    '
           %br/
           = f.collection_select :income_id, Income.all, :id, :annual_income
-          %p 額面での年収を選択してください
         .personal-form-group-family
           %i.fas.fa-house-user
           = f.label :family, '家族構成'

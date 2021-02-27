@@ -8,9 +8,10 @@
         = render "devise/shared/error_messages", resource: resource
         .personl-form-group-income
           %i.fas.fa-money-check
-          = f.label :income, '年収    '
+          = f.label :income, '年収（額面）   '
           %br/
           = f.collection_select :income_id, Income.all, :id, :annual_income
+          %p 
         .personal-form-group-family
           %i.fas.fa-house-user
           = f.label :family, '家族構成'
