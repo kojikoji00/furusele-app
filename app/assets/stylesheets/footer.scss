@@ -5,35 +5,39 @@ a{
   color: $text-color
 }
 
-.footer {
-  margin: 20px;
-  margin-top: 50px;
+// .footer {
+//   margin: 20px;
+//   margin-top: 50px;
+.link {
   clear: both;
-  h4{
-    font-size: 20px;
-    clear: both;
-  }
-  .link {
-    &-twitter{
-      float: right;
-      text-align: center;
-    }
-    ul{
-      float: right;
-      li{
-        margin: 10px;
-        list-style: none;
-        float: left;
-        img{
-          height: 45px;
-        }
-        h1{
-          font-size: 34px;
-        }
-        p {
-          font-size: 12px;
-        }
+  ul{
+    float: left;
+    li{
+      margin: 10px;
+      list-style: none;
+      i {
+        font-size: 16px;
+        font-weight: 900;
+        // background: linear-gradient(transparent 90%,  #333333 70%);
+      }
+      i:hover{
+        opacity: 0.6;
       }
     }
   }
 }
+
+.footer{
+  margin-top: 100px;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  background-color: #174a5c;
+  ul.footer-menu li{
+    display: inline;
+    .footer-btn{
+      color: white;
+    }
+  }
+}
+// }

@@ -3,15 +3,17 @@ class CategoriesController < ApplicationController
   def new
     @categories = Category.all
     gon.category_details = CategoryDetail.all
-    income = current_user.income_id
-    family = current_user.family_id
-    @deduction = DeductionList.find_by(income_id: income, family_id: family)
+    # income = current_user.income_id
+    # family = current_user.family_id
+    # @deduction = DeductionList.find_by(income_id: income, family_id: family)
   end
 
   def create
-    income = current_user.income_id
-    family = current_user.family_id
-    @deduction = DeductionList.find_by(income_id: income, family_id: family)
+    if user_signed_in?
+      income = current_user.income_id
+      family = current_user.family_id
+      @deduction = DeductionList.find_by(income_id: income, family_id: family)
+    end
     category_first = Category.new(id: params[:category_id_first])
     @category_first = Category.where(id: category_first.id).first
     category_second = Category.new(id: params[:category_id_second])
@@ -27,7 +29,11 @@ class CategoriesController < ApplicationController
     require 'nokogiri'
     require 'open-uri'
     require 'json'
-    url = 'https://www.satofull.jp/products/list.php?cat=' + category_select_first + category_select_second + category_select_third + '&pri=' +@deduction.deduction_id.to_s
+    if user_signed_in?
+      url = 'https://www.satofull.jp/products/list.php?cat=' + category_select_first + category_select_second + category_select_third + '&pri=' +@deduction.deduction_id.to_s
+    else
+      url = 'https://www.satofull.jp/products/list.php?cat=' + category_select_first
+    end
     charset = nil
     html = open(url) do |f|
       charset = f.charset
@@ -49,20 +55,36 @@ class CategoriesController < ApplicationController
       review_image_path = 'https://www.satofull.jp' + node.css('.ItemList__review>img').attribute('src')
       array << [link, name, city, price,description, picture_image_path, review_image_path]
     end
-    @history = current_user.histories.create
-    array.each do |t|
-      item = @history.history_detail.new
-      item.history_id = @history.id
-      item.link = t[0]
-      item.name = t[1]
-      item.city = t[2]
-      item.price = t[3]
-      item.description = t[4]
-      item.picture_image_path = t[5]
-      item.review_image_path = t[6]
-      item.save
+    if user_signed_in?
+      @history = current_user.histories.create
+      array.each do |t|
+        item = @history.history_detail.new
+        item.history_id = @history.id
+        item.link = t[0]
+        item.name = t[1]
+        item.city = t[2]
+        item.price = t[3]
+        item.description = t[4]
+        item.picture_image_path = t[5]
+        item.review_image_path = t[6]
+        item.save
+      end
+      redirect_to history_path(@history)
+    else
+      # @history = current_user.histories.create
+      # array.each do |t|
+        # item = @history.history_detail.new
+        # item.history_id = @history.id
+      #   item.link = t[0]
+      #   item.name = t[1]
+      #   item.city = t[2]
+      #   item.price = t[3]
+      #   item.description = t[4]
+      #   item.picture_image_path = t[5]
+      #   item.review_image_path = t[6]
+      # end
+      # redirect_to 
     end
-    redirect_to history_path(@history)
   end
   
   def category_select_first

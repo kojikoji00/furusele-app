@@ -1,12 +1,23 @@
 = render 'commons/header'
-%h3.deduction
-  = "控除額：#{@deduction.deduction.to_s(:delimited)}円"
-  
-.category
-  .category-title
-    %h3 カテゴリーを１〜３つ選択してください
-  .category-select
-    = form_with(model: @category_detail, url: "/categories", method: 'post') do |f|
-      = render 'category'
-      = submit_tag '登録する', class: 'btn-primary', id: 'file-btn'
 
+- if user_signed_in?
+  .category
+    .category-title
+      %h3 カテゴリーを１〜３つ選択してください
+    .category-select
+      = form_with(model: @category_detail, url: "/categories", method: 'post') do |f|
+        = render 'commons/category'
+        = submit_tag '登録する', class: 'btn-primary', id: 'file-btn'
+- else
+  .category
+    .category-title
+      %h3 カテゴリーを１つ選択してください
+    .category-select
+      = form_with(model: @category_detail, url: "/categories", method: 'post') do |f|
+        .first
+          .category-parent
+            %h3 カテゴリー
+            = select_tag :category_id_first, options_from_collection_for_select(Category.all, :id, :name), prompt: '選択してください', remote: true
+        = submit_tag '登録する', class: 'btn-primary', id: 'file-btn'
+
+= render 'commons/footer'

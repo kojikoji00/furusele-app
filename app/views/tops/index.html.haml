@@ -1,6 +1,7 @@
 = render 'commons/header'
 
 .previews
+  %h3 「ふるセレ」はふるさと納税支援サイトです
   .slider
     -# = image_tag 'furusato.jpg'
     = image_tag 'farmer.jpg'
@@ -22,8 +23,8 @@
     .explanation-character
       =image_tag 'fulltan.png'
       %p ふるたん
-    %p ふるセレとは、ふるさと納税支援サイトです。
-    %p 簡単な操作で、あなたのふるさと納税の商品を選びます。
+    %p ふるセレとは、ふるさと納税の商品選択のお手伝いをするサイトです。
+    %p 簡単な操作で、あなたへのおすすめの商品をご紹介します。
     %p 忙しくて時間がない、初めてで何を選んだら良いかわからない方はぜひお試しください！
     %br/
     %br/
@@ -37,13 +38,13 @@
   %p
     ②カテゴリーを選ぶ
     %br/
-    「いくら」と「明太子・たらこ」を選択し登録
+    例：「いくら」と「明太子・たらこ」を選択し登録
     .category-image
       =image_tag 'sample_category.png'
     %br/
   %p
     %br/
-    ③選択したカテゴリーに該当する商品を表示
+    ③控除額と選択したカテゴリーからおすすめの商品を表示
     .history-image
       = image_tag 'ikura.jpg'
       = image_tag 'sample_mentaiko.jpg'
@@ -65,10 +66,14 @@
 %br/
 %br/
 = link_to '会員登録', new_user_registration_path, class: 'link-btn'
-%p 会員登録をすると、過去の選択履歴が確認できます。
+%p 会員登録でできること
+%p 　①過去の選択履歴が確認できる
+%p 　②より細かいカテゴリー選択ができる（サブカテゴリー追加）
+%p 　②複数のカテゴリーで商品検索できる
 %br/
 = link_to 'ログイン', new_user_session_path, class: 'link-btn'
-
 %p 会員登録済みの方はこちら
+
+= render 'commons/footer'
 
 = javascript_pack_tag 'top'

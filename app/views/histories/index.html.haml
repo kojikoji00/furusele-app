@@ -27,23 +27,23 @@
             .result-review
               = image_tag item.review_image_path
 
-.footer
-  .link
-    .link-twitter
-      %i.fab.fa-twitter-square.fa-3x
-      %p 共有しよう！
-    %h4 他にも気になる商品があればリンク先から検索してみてください。
-    %ul
-      %li
-        = link_to 'https://www.satofull.jp/' do
-          .link-title
-            %h1 さ
-          .link-comment
-            %p さとふる
-      %li
-        = link_to 'https://event.rakuten.co.jp/furusato/' do
-          .link-image
-            = image_tag 'rakuten.png'
-          .link-comment
-            %p 楽天ふるさと納税
+
+.link
+  -# .link-twitter
+  -#   %i.fab.fa-twitter-square.fa-3x
+  -#   %p 共有しよう！
+  %h4 他にも気になる商品があればリンク先から検索ください。
+  %ul
+    %li
+      = link_to 'https://www.satofull.jp/' do
+        -# .link-title
+        -#   %p さ
+        .link-satofull
+          %i.fas.fa-angle-right 　さとふる
+    %li
+      = link_to 'https://event.rakuten.co.jp/furusato/' do
+        -# .link-image
+        -#   = image_tag 'rakuten.png'
+        .link-rakuten
+          %i.fas.fa-angle-right 　楽天ふるさと納税
 
