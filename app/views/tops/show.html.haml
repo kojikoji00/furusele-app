@@ -3,7 +3,7 @@
 .explanation
   .explanation.title
     %h3
-      そもそも
+      そもそも、
       %span.under> ふるさと納税
       って何？
 
@@ -11,15 +11,17 @@
   .explanation-content
     = image_tag 'furusato_nouzei.png'
     %p
-      実質2,000円の負担で、各地の美味しい名産品がもらえます！
+      実質2,000円の負担で、各地の名産品がもらえます！
       %br/
       %br/
-      税金の控除もあってお得だし、ワンストップ特例申請制度を使えば確定申告もいりません。
+      税金の控除もあってお得で、ワンストップ特例申請制度を使えば確定申告もいりません。
       %br/
       この機会にぜひやってみましょう！
       %br
       %br
-      詳しい内容は各自治体のHPまたはふるさと納税支援サイトをご確認ください。
+      詳しい内容は各自治体のホームページ、または
+      %span>ふるさと納税支援サイト
+      をご確認ください。
 
 
 
@@ -29,6 +31,7 @@
       ふるさと納税の
       %span.under> ポイント
   .charm-content
+    =image_tag 'fulltan.png'
     %ul
       %li
         .charm-item-title
@@ -49,6 +52,7 @@
           %p
           応援した地域の特産品などが届く
 
+
 .step.title
   %h3
     %span.under> 手続き
@@ -65,8 +69,7 @@
     %dl
       %dt 選ぶ
       %dd
-        好きな商品を選ぼう
-        %br/
+        ふるさと納税対象の商品を選ぼう
         %br/
         %br/
   %li
@@ -74,13 +77,21 @@
     %dl
       %dt 買う
       %dd 自治体に寄付する（ふるさと納税対象商品を購入する）
+      %br/
   %li
     %span.icon 04
     %dl
-      %dt 申請
+      %dt 申請する
       %dd ワンストップ申請書で控除手続きをする
       %br/
-%br/
+.comment
+  %p たったこれだけ！
+  %br/
+  %p しかもステップ１・２はふるセレでできちゃいます！
+  %p ステップ３もふるセレで選んだ商品のリンク先から購入するだけなので、とても簡単です。
+  %p ぜひお試しください！
+  %i.fas.fa-angle-double-down
+
 .button
   = link_to '試してみる', edit_user_registration_path, class: 'btn secondary'
 .btn.primary
@@ -95,3 +106,5 @@
   %p 会員登録済みの方はこちら
   %br/
   %br/
+
+= render 'commons/footer'

@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2021_01_28_143736) do
     t.integer "income_id"
     t.integer "family_id"
     t.integer "deduction"
+    t.integer "deduction_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

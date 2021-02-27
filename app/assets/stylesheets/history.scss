@@ -13,13 +13,12 @@
   p {font-size: 12px;}
   ul{
     li{
+      text-align: center;
       list-style: none;
+      margin-bottom: 100px;
       .result-image{
-        margin-top: 100px;
-        margin-top: 20px;
-        margin-bottom: 10px;
         img{
-          width: 200px;
+          width: 400px;
         }
       }
     }

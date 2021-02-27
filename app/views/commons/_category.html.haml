@@ -1,0 +1,34 @@
+.first
+  .category-parent
+    %h3 カテゴリー
+    = select_tag :category_id_first, options_from_collection_for_select(Category.all, :id, :name), prompt: '選択してください', remote: true
+  .category-child
+    %h3 サブカテゴリー
+    = select_tag :category_detail_id_first, options_from_collection_for_select(CategoryDetail.all, :id, :name), prompt: '選択してください', remote: true
+.second
+  .category-parent
+    = select_tag :category_id_second, options_from_collection_for_select(Category.all, :id, :name), prompt: '選択してください', remote: true
+  .category-child
+    = select_tag :category_detail_id_second, options_from_collection_for_select(CategoryDetail.all, :id, :name), prompt: '選択してください', remote: true
+.third
+  .category-parent
+    = select_tag :category_id_third, options_from_collection_for_select(Category.all, :id, :name), prompt: '選択してください', remote: true
+  .category-child
+    = select_tag :category_detail_id_third, options_from_collection_for_select(CategoryDetail.all, :id, :name), prompt: '選択してください', remote: true
+-#   = select_tag :category_id, options_from_collection_for_select(Category.all, :id, :name), prompt: '選択してください', remote: true
+-# .category-child
+-#   %h3 サブカテゴリー
+-#   = select_tag :category_detail_id, options_from_collection_for_select(CategoryDetail.all, :id, :name), prompt: '選択してください', remote: true
+
+= javascript_pack_tag 'get_category_details'
+
+
+-# .category-select
+-#   .category-parent
+-#     = select_tag :category_id, options_from_collection_for_select(Category.all, :id, :name), prompt: '選択してください'
+
+-#   .category-child
+-#     = form_with(model: @category_detail, url: new_category_category_detail_path(id: @category_detail.id, category_id: @category.id)) do |f|
+-#       = f.label :category_detail
+-#       = f.select_tag :category_detail_id, options_from_collection_for_select(CategoryDetail.all, :id, :name), prompt: '選択してください'
+-#       = f.submit '登録する', class: 'btn-primary', id: 'file-btn'

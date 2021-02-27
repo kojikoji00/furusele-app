@@ -3,6 +3,7 @@ $text-color: #333333;
 
 .button{
   text-align: center;
+  clear: both;
   margin: 30px 0;
   display: block;
   .btn.secondary {
@@ -28,7 +29,7 @@ $text-color: #333333;
 .link-btn {
   text-decoration: none;
   font-weight: 900;
-  background: linear-gradient(transparent 70%, yellow 70%);
+  background: linear-gradient(transparent 90%,  #333333 70%);
 }
 .link-btn:hover {
   opacity: 0.6;
@@ -38,4 +39,5 @@ $text-color: #333333;
   width: 100px;
   height: 35px;
   font-size: 15px;
+  clear: both;
 }

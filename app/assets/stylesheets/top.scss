@@ -10,6 +10,13 @@ select{
   font-size: $text-size;
 }
 
+.previews{
+  h3{
+    font-size: 16px;
+    color: gray;
+    text-align: center;
+  }
+}
 
 .personal {
   margin: 0 30px;
@@ -41,6 +48,14 @@ select{
   margin: 50px 30px;
   clear: both;
   border: 3px solid $base-color;
+  &-select{
+    background-color: #ffffdf;
+    padding: 10px 20px;
+  }
+  &-parent{
+    float: left;
+    clear: both;
+  }
   &-title{
     background-color: $base-color;
     font-size: $text-size;
@@ -53,7 +68,7 @@ select{
   }
   select {
     margin: 5px;
-    width: 600px;
+    width: 420px;
     height: 35px;
     margin-bottom: 10px;
   }

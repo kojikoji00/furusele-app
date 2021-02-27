@@ -1,38 +1,23 @@
-// import $ from 'jquery'
-// import axios from 'modules/axios'
+import $ from 'jquery'
+// import slick from 'slick-carousel'
+import 'slick-carousel'
 
 // document.addEventListener('DOMContentLoaded', function(){
-//   $('.slider').slick({
-//     slidesToShow: 2,
-//     slidesToScroll: 1,
-//     autoplay: true,
-//     autoplaySpeed: 4200,
-//   })
-// });
-
-$(function() {
+$(document).ready(function(){
   $('.slider').slick({
-    slidesToShow: 2,
-    slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4200,
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    adaptiveHeight: true
   })
 });
+  // $('.slider').slick({
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   autoplaySpeed: 4200,
+  // })
 
-// $(window).on('load', function() {
-//   $('.slider').slick({
-//     slidesToShow: 2,
-//     slidesToScroll: 1,
-//     autoplay: true,
-//     autoplaySpeed: 4200,
-//   })
-// });
-
-// $(document).ready(function() {
-//   $('.slider').slick({
-//     slidesToShow: 2,
-//     slidesToScroll: 1,
-//     autoplay: true,
-//     autoplaySpeed: 4200,
-//   })
-// });
