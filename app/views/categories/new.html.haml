@@ -8,6 +8,7 @@
       = form_with(model: @category_detail, url: "/categories", method: 'post') do |f|
         = render 'commons/category'
         = submit_tag '登録する', class: 'btn-primary', id: 'file-btn'
+  
 - else
   .category
     .category-title

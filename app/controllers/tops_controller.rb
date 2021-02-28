@@ -11,7 +11,12 @@ class TopsController < ApplicationController
 
   def privacy
   end
+
   def term
+  end
+  
+  def form
+
   end
 end
   # def new_guest

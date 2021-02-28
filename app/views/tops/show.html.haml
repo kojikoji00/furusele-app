@@ -94,17 +94,25 @@
 
 .button
   = link_to '試してみる', edit_user_registration_path, class: 'btn secondary'
-.btn.primary
-  = link_to '会員登録', new_user_registration_path, class: 'link-btn'
-  %br/
-  %p 会員登録をすると、過去の選択履歴が確認できます。
-  %br/
 
-.btn.primary
-  = link_to 'ログイン', new_user_session_path, class: 'link-btn'
-  %br/
-  %p 会員登録済みの方はこちら
-  %br/
-  %br/
+ 
+
+- unless user_signed_in?
+  .btn.primary
+    = link_to '会員登録', new_user_registration_path, class: 'link-btn'
+    %br/
+    %p 会員登録をすると、過去の選択履歴が確認できます。
+    %br/
+  .btn.primary
+    = link_to 'ログイン', new_user_session_path, class: 'link-btn'
+    %br/
+    %p 会員登録済みの方はこちら
+    %br/
+
+  .btn.primary
+    = link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post, class:'link-btn'
+
+.back
+  = link_to 'TOPへ戻る', root_path
 
 = render 'commons/footer'
