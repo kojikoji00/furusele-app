@@ -1,4 +1,10 @@
 = render 'commons/header'
+
+.container
+  %ul
+    - @user.errors.full_messages.each do |message|
+      %li= message
+      
 .personal
   .personal-title
     %h3 あなたの情報を入力してください
