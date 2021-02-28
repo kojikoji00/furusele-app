@@ -41,3 +41,14 @@ $text-color: #333333;
   font-size: 15px;
   clear: both;
 }
+
+.back {
+  text-align: right;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 22px;
+}
+.back:hover {
+  opacity: 0.6;
+}

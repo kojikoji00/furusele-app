@@ -33,7 +33,7 @@
     %br/
 .sample
   %p
-    ①年収・家族構成を入力
+    ①年収・家族構成を登録
   .personal-image
     =image_tag 'sample_personal_image.png'
     %br/
@@ -79,6 +79,8 @@
   %br/
   = link_to 'ログイン', new_user_session_path, class: 'link-btn'
   %p 会員登録済みの方はこちら
+  %br/
+  = link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post, class:'link-btn'
 
 = render 'commons/footer'
 
