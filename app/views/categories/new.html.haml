@@ -12,7 +12,8 @@
       = form_with(model: @category_detail, url: "/categories", method: 'post') do |f|
         = render 'commons/category'
         = submit_tag '登録する', class: 'btn-primary', id: 'file-btn'
-  
+      %p ※商品検索のため時間がかかります。
+
 - else
   .category
     .category-title
