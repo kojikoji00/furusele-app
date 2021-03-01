@@ -1,13 +1,14 @@
 
 = render 'commons/header'
 %h3.deduction
-  = "控除額：#{@deduction.deduction.to_s(:delimited)}円"
+  = "控除上限額の目安：#{@deduction.deduction.to_s(:delimited)}円"
 
 .history-title
   %h3 あなたが選んだ商品
 .history-list
   -@histories.limit(5).each do |history|
-    = history.created_at.strftime('%Y/%m/%d')
+    .history-time
+      = history.created_at.strftime('%Y/%m/%d')
     %ul.history_detail-list
       - history.history_detail.each do |item|
         %li
