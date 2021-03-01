@@ -1,6 +1,6 @@
 .first
   .category-parent
-    %h3 カテゴリー
+    %h3 メインカテゴリー
     = select_tag :category_id_first, options_from_collection_for_select(Category.all, :id, :name), prompt: '選択してください', remote: true
   .category-child
     %h3 サブカテゴリー

@@ -7,12 +7,16 @@
 - if user_signed_in?
   .category
     .category-title
-      %h3 カテゴリーを１〜３つ選択してください
+      %h3 検索したい商品カテゴリーを選択してください（1〜3つ）
     .category-select
       = form_with(model: @category_detail, url: "/categories", method: 'post') do |f|
         = render 'commons/category'
         = submit_tag '登録する', class: 'btn-primary', id: 'file-btn'
-      %p ※商品検索のため時間がかかります。
+      %p ※選択したカテゴリーを登録することにより、人気の商品を5つご紹介します。
+      %p ※まずは「メインカテゴリー」で検索したい商品のカテゴリーを選択してください。より細かい検索が必要であれば「サブカテゴリー」も選択してください。
+      %p ※選択するカテゴリーは1つから検索可能です。
+      %p ※メインカテゴリーだけ・サブカテゴリーだけでも検索可能です。
+      %p ※商品検索には時間がかかりますので、登録ボタンを押したらそのまましばらくお待ちください。
 
 - else
   .category
