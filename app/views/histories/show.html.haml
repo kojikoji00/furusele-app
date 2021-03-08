@@ -1,7 +1,7 @@
 
 = render 'commons/header'
 
-.deduction
+%h3.deduction
   = "控除上限額の目安：#{@deduction.deduction.to_s(:delimited)}円"
 -# .select-catgory
 -#   = "あなたの選んだカテゴリーは#{Category.find(id: @category.id).name}です"
@@ -9,8 +9,9 @@
 .result
   .result-title
     %h3 結果一覧
+    %p ※商品情報は「さとふる」より引用しています。
+    %p 　商品を購入する際は商品のリンク先よりご注文ください。
   %ul
-    -# - @history_detail.each do |history_detail|
     - @history_details.each do |item|
       %li
         = link_to item.link do
@@ -24,7 +25,9 @@
               = item.city
           .result-price
             %p
-              = item.price
+              -# = item.price
+              = "#{item.price}円"
+
           .result-description
             %p
               = item.description
@@ -33,24 +36,15 @@
 
 
 .link
-  -# .link-twitter
-  -#   %i.fab.fa-twitter-square.fa-3x
-  -#   %p 共有しよう！
   %h4 他にも気になる商品があればリンク先から検索ください。
   %ul
     %li
       = link_to 'https://www.satofull.jp/' do
-        -# .link-title
-        -#   %p さ
         .link-satofull
           %i.fas.fa-angle-right　さとふる
     %li
       = link_to 'https://event.rakuten.co.jp/furusato/' do
-        -# .link-image
-        -#   = image_tag 'rakuten.png'
         .link-rakuten
           %i.fas.fa-angle-right　楽天ふるさと納税
 
 = render 'commons/footer'
-
--# = javascript_pack_tag 'top'

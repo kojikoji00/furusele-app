@@ -9,7 +9,10 @@
           - else
             = link_to 'ログイン', new_user_session_path
         %li
-          = link_to '商品を選ぶ', new_category_path
+          - if user_signed_in?
+            = link_to '商品を選ぶ', new_category_path
+          - else
+            = link_to '商品を選ぶ', new_user_registration_path
         %li
           - if user_signed_in?
             = link_to 'マイページ', histories_path
@@ -22,14 +25,6 @@
   .header-title
     = link_to 'ふるセレ', root_path
 
-
-  -# .header_explanation
-  -#   = link_to select_path do
-  -#     .header_explanation_image
-  -#       = image_tag 'wakaba.png'
-  -#     .header_explanation_title
-  -#       %p ふるさと納税とは
--# = javascript_pack_tag 'top'
 
 
 

@@ -5,6 +5,8 @@
 
 .history-title
   %h3 あなたが選んだ商品
+  %p ※商品情報は「さとふる」より引用しています。
+  %p 　商品を購入する際は商品のリンク先よりご注文ください。
 .history-list
   -@histories.limit(5).each do |history|
     .history-time
@@ -48,4 +50,5 @@
         -#   = image_tag 'rakuten.png'
         .link-rakuten
           %i.fas.fa-angle-right　楽天ふるさと納税
+= render 'commons/footer'
 

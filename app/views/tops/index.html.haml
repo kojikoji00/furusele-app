@@ -5,15 +5,12 @@
 .previews
   %h3 「ふるセレ」はふるさと納税支援サイトです
   .slider
-    -# = image_tag 'furusato.jpg'
     = image_tag 'farmer.jpg'
     = image_tag 'ikura.jpg'
     = image_tag 'rice.jpg'
-    -# = image_tag 'vegetables.jpg'
     = image_tag 'crab.jpg'
     = image_tag 'strawberry.jpg'
     = image_tag 'pork.jpg'
-    -# = image_tag 'beaf.jpg'
 
 .explanation
   .explanation.title
@@ -26,7 +23,7 @@
       =image_tag 'fullbou.png'
       %p ふる坊
     %p ふるセレとは、ふるさと納税の商品選択のお手伝いをするサイトです。
-    %p 簡単な操作で、あなたへのおすすめの商品をご紹介します。
+    %p 簡単な操作で、あなたへのおすすめの商品をご紹介します。引用元：「さとふる」
     %p 忙しくて時間がない、初めてで何を選んだら良いかわからない方はぜひお試しください！
     %br/
     %br/
@@ -59,13 +56,6 @@
       - else
         = link_to 'ログイン', edit_user_registration_path, class: 'btn secondary'
       %br/
-
-
-
--# .button
--#   = link_to 'まずは商品を選んでみる', edit_user_registration_path, class: 'btn secondary'
--# %br/
--# %br/
 
 .links
   = link_to 'ふるさと納税について詳しく知る', tops_path, class: 'link-btn'

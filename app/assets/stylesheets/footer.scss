@@ -15,7 +15,7 @@ a{
       margin: 10px;
       list-style: none;
       i {
-        font-size: 16px;
+        font-size: 22px;
         font-weight: 900;
         color: #1d3994;
         font-weight: 900;
@@ -40,23 +40,28 @@ a{
     .footer-btn{
       color: white;
     }
-    .footer-btm:hover{
+    .footer-btn:hover{
       opacity: 0.6;
     }
   }
 }
 
-.privacy, .term {
-  padding: 40px;
+.privacy, .term, .improve {
+  padding: 80px;
   h1{
     text-align: center;
+    font-size: 50px;
     margin-bottom: 50px;
   }
   h2{
-    font-size: 30px;
+    font-size: 36px;
   }
   h3{
-    margin-top: 10px;
+    font-size: 24px;
+    margin-top: 18px;
+  }
+  p{
+    font-size: 20px;
   }
 
 }

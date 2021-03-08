@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'privacy' => 'tops#privacy', as: 'privacy'
   get 'term' => 'tops#term', as: 'term'
   get 'form' => 'tops#form', as: 'form'
+  get 'improve' => 'tops#improve', as: 'improve'
   # post 'tops/guest_sign_in', to: 'tops#new_guest'
   resource :tops, only: %i[show ]
   resource :deduction_list, only: %i[new create]

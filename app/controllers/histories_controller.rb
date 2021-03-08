@@ -9,7 +9,6 @@ class HistoriesController < ApplicationController
 
   def show
     @history = History.find(params[:id])
-    # @history_detail = HistoryDetail.find_by(params[:history_id])
 
     @history_details = HistoryDetail.where(history_id: @history.id)
     income = current_user.income_id
@@ -21,8 +20,4 @@ class HistoriesController < ApplicationController
 
   end
 
-  private
-  def history_params
-    # params.require(:history).permit(:category_id)
-  end
 end

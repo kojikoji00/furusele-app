@@ -1,24 +1,24 @@
-= render 'commons/header'
-.personal
-  .personal-title
-    %h3 あなたの情報を入力してください
-  .personal-form
-    .personal-form-group
-      -# = form_with(model: @deduction_list, url: '/deduction_list', method: 'post')  do |f|
-      = form_with(model: @deduction_list, url: '/deduction_list', method: 'post')  do |f|
-        -# = render "devise/shared/error_messages", resource: resource
-        .personl-form-group-income
-          %i.fas.fa-money-check
-          = f.label :income, '年収    '
-          %br/
-          = f.collection_select :income_id, Income.all, :id, :annual_income
-        .personal-form-group-family
-          %i.fas.fa-house-user
-          = f.label :family, '家族構成'
-          %br/
-          = f.collection_select :family_id, Family.all, :id, :family_member
-        .personal-form-group-btn
-          = f.submit '登録する', class: 'btn-primary', id: 'file-btn'
-      %p ＊算出される金額はあくまで目安であり、正確な計算は寄付翌年1月～2月にお住まいの市町村にお尋ねください。
+-# = render 'commons/header'
+-# .personal
+-#   .personal-title
+-#     %h3 あなたの情報を入力してください
+-#   .personal-form
+-#     .personal-form-group
+-#       -# = form_with(model: @deduction_list, url: '/deduction_list', method: 'post')  do |f|
+-#       = form_with(model: @deduction_list, url: '/deduction_list', method: 'post')  do |f|
+-#         -# = render "devise/shared/error_messages", resource: resource
+-#         .personl-form-group-income
+-#           %i.fas.fa-money-check
+-#           = f.label :income, '年収    '
+-#           %br/
+-#           = f.collection_select :income_id, Income.all, :id, :annual_income
+-#         .personal-form-group-family
+-#           %i.fas.fa-house-user
+-#           = f.label :family, '家族構成'
+-#           %br/
+-#           = f.collection_select :family_id, Family.all, :id, :family_member
+-#         .personal-form-group-btn
+-#           = f.submit '登録する', class: 'btn-primary', id: 'file-btn'
+-#       %p ＊算出される金額はあくまで目安であり、正確な計算は寄付翌年1月～2月にお住まいの市町村にお尋ねください。
 
-      = render 'commons/footer'
+-#       = render 'commons/footer'
