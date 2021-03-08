@@ -30,7 +30,7 @@ $base-color: #e74c3c;
   h5{
     font-size: $text-size;
   }
-  p{font-size: 16px;}
+  p{font-size: $text-size;;}
   &-character{
     img{
       width: 200px;
@@ -42,6 +42,7 @@ $base-color: #e74c3c;
       width: 200px;
       margin: 0px 60px 30px 50px;
       text-align: center;
+      font-size: $text-size;
     }
   }
 }

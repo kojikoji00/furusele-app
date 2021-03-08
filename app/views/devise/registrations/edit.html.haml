@@ -30,34 +30,4 @@
       %p  ※配偶者控除無し：配偶者の給与収入が２０１万円以上ある方
       %p  ※中学生以下の子どもがいる場合、控除額の計算上は特に影響がありません。例えば、共働きで小学生の子供が1人の場合は、「既婚・共働き」の金額をご参照ください。また、夫婦で高校生の子供が1人、中学生の子供が1人の場合は、「＋子1人（高校生）」の金額をご参照ください。
       %p  ※算出される金額はあくまで目安であり、正確な計算は寄付翌年1月～2月にお住まいの市町村にお尋ねください。
-      -# .field
-      -#   = f.label :email
-      -#   %br/
-      -#   = f.email_field :email, autofocus: true, autocomplete: "email"
-      -# - if devise_mapping.confirmable? && resource.pending_reconfirmation?
-      -#   %div
-      -#     Currently waiting confirmation for: #{resource.unconfirmed_email}
-      -# .field
-      -#   = f.label :password
-      -#   %i (leave blank if you don't want to change it)
-      -#   %br/
-      -#   = f.password_field :password, autocomplete: "new-password"
-      -#   - if @minimum_password_length
-      -#     %br/
-      -#     %em
-      -#       = @minimum_password_length
-      -#       characters minimum
-      -# .field
-      -#   = f.label :password_confirmation
-      -#   %br/
-      -#   = f.password_field :password_confirmation, autocomplete: "new-password"
-      -# .field
-      -#   = f.label :current_password
-      -#   %i (we need your current password to confirm your changes)
-      -#   %br/
-      -#   = f.password_field :current_password, autocomplete: "current-password"
-  -# %h3 Cancel my account
-  -# %p
-  -#   Unhappy? #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
-  -# = link_to "Back", :back
 = render 'commons/footer'

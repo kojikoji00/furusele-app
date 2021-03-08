@@ -127,12 +127,4 @@ class CategoriesController < ApplicationController
       @category_detail_third.satofull_id
     end
   end
-  # private
-  # def category_params
-  #   params.require(:category).permit(:id, :satofull_id)
-  # end
-
-  # def category_detail_params
-  #   params.require(:category_detail).permit(:id, :category_id)
-  # end
 end
