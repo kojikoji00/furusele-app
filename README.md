@@ -1,5 +1,6 @@
 # アプリ名 ： 「ふるセレ」  
-https://furusele-app.herokuapp.com/  
+リンク先　https://furusele-app.herokuapp.com/  
+
 
 ## アプリ内容説明  
 　ふるさと納税支援アプリです。  
