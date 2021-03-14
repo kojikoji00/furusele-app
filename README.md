@@ -30,7 +30,7 @@ rspec-rails/rubocop-rails/erb2haml/capybara
 ココナラで外注しています。親しみやすいキャラクターにしました。  
 今回は「フタバ」さんに依頼しました。  
 ![furubou](fullbou.png)
-
+![ふる坊](fillbou.png)
   
   
 ## ■主な機能  
