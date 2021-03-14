@@ -1,4 +1,4 @@
-# アプリ名　：　「ふるセレ」  
+# アプリ名 ： 「ふるセレ」  
 https://furusele-app.herokuapp.com/  
 
 ## アプリ内容説明  
@@ -29,6 +29,8 @@ rspec-rails/rubocop-rails/erb2haml/capybara
   
 ココナラで外注しています。親しみやすいキャラクターにしました。  
 今回は「フタバ」さんに依頼しました。  
+![furubou](./images/furubou.png)
+
   
   
 ## ■主な機能  
