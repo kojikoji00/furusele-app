@@ -1,16 +1,13 @@
-ー内容修正中ですー
-
-※＊
-アプリ名：「ふるセレ」  
+# 「ふるセレ」(h1)  
 https://furusele-app.herokuapp.com/  
 
-アプリ内容説明  
+# アプリ内容説明(h2)  
 　ふるさと納税支援アプリです。  
 　年収と家族構成、好きなカテゴリーを入力することでその人にあったふるさと納税商品を紹介します。  
 　選択した商品からリンクとなっているページから商品の購入が可能です。　　
 　過去に選択した商品を一覧で確認することができます。　　
   
-■使用技術  
+# ■使用技術(h3)  
 ▼フロントエンド  
 　・HTML(HAML)・CSS（SCSS）・JavaScript（jQuery）  　
   
@@ -21,20 +18,20 @@ https://furusele-app.herokuapp.com/
 　・PostgreSQL 13.1・heroku・Rubocop・RSpec  
    
   
-■使用Gem  
+# ■使用Gem(h3)  
 annotate/aws-sdk-s3/better_errors/binding_of_caller/devise/faker/  
 activerecord-import/nokogiri/gon/google-analytics-rails/byebug/  
 dotenv-rails/factory_bot_rails/pry-byebug/rails-erd/  
 rspec-rails/rubocop-rails/erb2haml/capybara  
   
   
-■キャラクターについて  
+# ■キャラクターについて(h3)  
   
 ココナラで外注しています。親しみやすいキャラクターにしました。  
 今回は「フタバ」さんに依頼しました。  
   
   
-■主な機能  
+# ■主な機能(h3)  
 ・ログイン機能  
 ・ゲストログイン機能  
 ・年収・家族構成によって控除限度額を算出（DBから表示）  
@@ -45,7 +42,7 @@ rspec-rails/rubocop-rails/erb2haml/capybara
 ・プライバシーポリシー・利用規約  
    
   
-■アプリの作成について  
+# ■アプリの作成について(h3)  
 ＜作成方針＞  
 　・技術をたくさん盛り込むよりも、まずはきちんと使えるサイトを作る。  
 　・楽天やさとふるは商品を探す上でとても役立つサイトですが、商品の選択肢が多く、その分何を選べば良いかわからなくなることがあるため、わかりやすさとシンプルさを重視して差別化を図る。  
@@ -54,7 +51,7 @@ rspec-rails/rubocop-rails/erb2haml/capybara
 　・初めてふるさと納税をする人・時間がない人  
 　・支援する地域にこだわりがない人  
    
- ■実際の操作画面  
+# ■実際の操作画面(h3)  
 　年収・家族構成登録（控除額算出）  
 　カテゴリー選択  
 　商品表示画面（例）  
@@ -63,8 +60,8 @@ rspec-rails/rubocop-rails/erb2haml/capybara
 　上：魚介・海産物、米・パンで検索  
 　下：果物・米・パンで検索  
    
-■アプリの改善項目  
-＜機能面＞  
+# ■アプリの改善項目(h3)  
+# ＜機能面＞(h4)  
 　Githubのissueにて管理をしているので、適宜更新していきます。  
   
 　・カテゴリー選択後にスクレイピングが毎度走るので時間がかかる  
@@ -90,7 +87,7 @@ rspec-rails/rubocop-rails/erb2haml/capybara
 　　→　①さとふるだけでなく楽天等からも取得できるように。  
 　　　 ②還元率や地域別などからも情報を取れるように  
   
-＜コード面＞  
+# ＜コード面＞(h4)  
  ・テスト項目を増やす  
 　 →　現時点では手動テストを実施。機能面追加時には必要となる。  
  ・自動テストの実装    
