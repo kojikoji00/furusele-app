@@ -1,14 +1,8 @@
+ー内容修正中です
+
 私が作成したふるさと納税支援アプリ「ふるセレ」についてご紹介させていただきます。
 
 アプリ名：「ふるセレ」https://furusele-app.herokuapp.com/
-
-■トップ画面
-f:id:kotakota8448:20210303124458p:plain
-
-
-■ER図
-f:id:kotakota8448:20210303124305p:plain
-
  
 ■使用技術
 ▼フロントエンド
@@ -19,12 +13,10 @@ f:id:kotakota8448:20210303124305p:plain
 ・PostgreSQL 13.1・heroku・Rubocop・RSpec
 
  
-
 ■使用Gem
 annotate/aws-sdk-s3/better_errors/binding_of_caller/devise/faker/activerecord-import/nokogiri/gon/google-analytics-rails/byebug/dotenv-rails/factory_bot_rails/pry-byebug/rails-erd/rspec-rails/rubocop-rails/erb2haml/capybara
 
  
-
 ■メインキャラクターについて
 f:id:kotakota8448:20210303121503p:plain
 ココナラで外注しています。親しみやすいキャラクターにしました。
@@ -49,20 +41,12 @@ f:id:kotakota8448:20210303121503p:plain
 ＜ターゲット＞
 ・初めてふるさと納税をする人・時間がない人
 ・支援する地域にこだわりがない人
-
-
-■ワイヤーフレームとサイトマップ（一部抜粋）
-f:id:kotakota8448:20210312072714p:plain
-f:id:kotakota8448:20210312072751p:plain
-f:id:kotakota8448:20210312072822p:plain
-
  
  ■実際の操作画面
 年収・家族構成登録（控除額算出）
-f:id:kotakota8448:20210303233358p:plain
+
 
 カテゴリー選択
-f:id:kotakota8448:20210303231418p:plain
 
  
 
@@ -71,8 +55,6 @@ f:id:kotakota8448:20210303231418p:plain
 
 　上：魚介・海産物、米・パンで検索　
 　下：果物・米・パンで検索
-f:id:kotakota8448:20210303230822p:plain
-
  
 
 ■アプリの改善項目
@@ -104,7 +86,6 @@ Githubのissueにて管理をしているので、適宜更新していきます
 　　 ②還元率や地域別などからも情報を取れるように
 
  
-
 ＜コード面＞
 ・テスト項目を増やす　
 　　→　現時点では手動テストを実施。機能面追加時には必要となる。
