@@ -1,8 +1,11 @@
-ー内容修正中です
+ー内容修正中ですー
 
-私が作成したふるさと納税支援アプリ「ふるセレ」についてご紹介させていただきます。
-
-アプリ名：「ふるセレ」https://furusele-app.herokuapp.com/
+アプリ名：「ふるセレ」　https://furusele-app.herokuapp.com/
+アプリ内容説明
+　ふるさと納税支援アプリです。
+　年収と家族構成、好きなカテゴリーを入力することでその人にあったふるさと納税商品を紹介します。
+　選択した商品からリンクとなっているページから商品の購入が可能です。
+　過去に選択した商品を一覧で確認することができます。
  
 ■使用技術
 ▼フロントエンド
@@ -17,8 +20,7 @@
 annotate/aws-sdk-s3/better_errors/binding_of_caller/devise/faker/activerecord-import/nokogiri/gon/google-analytics-rails/byebug/dotenv-rails/factory_bot_rails/pry-byebug/rails-erd/rspec-rails/rubocop-rails/erb2haml/capybara
 
  
-■メインキャラクターについて
-f:id:kotakota8448:20210303121503p:plain
+■キャラクターについて
 ココナラで外注しています。親しみやすいキャラクターにしました。
 今回は「フタバ」さんに依頼しました。
  
@@ -95,8 +97,6 @@ Githubのissueにて管理をしているので、適宜更新していきます
 　　→　コントローラーが肥大化している
 ・保守性の向上
 
- 
-
 アプリについての紹介は以上です。
-ぜひよろしければ一度お試しください！ 
+ぜひよろしければ一度お試しください！ https://furusele-app.herokuapp.com/
 ご意見がありましたらぜひ問い合わせページよりお願いいたします。
