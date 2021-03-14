@@ -1,7 +1,6 @@
 ー内容修正中ですー
 
 **アプリ名：「ふるセレ」　
-
 https://furusele-app.herokuapp.com/
 
 アプリ内容説明
