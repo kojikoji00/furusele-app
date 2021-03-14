@@ -1,4 +1,4 @@
-# 「ふるセレ」  
+# アプリ名　：　「ふるセレ」  
 https://furusele-app.herokuapp.com/  
 
 ## アプリ内容説明  
