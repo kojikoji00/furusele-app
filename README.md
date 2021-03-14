@@ -53,7 +53,7 @@ rspec-rails/rubocop-rails/erb2haml/capybara
    
 ## ■実際の操作画面  
 　年収・家族構成登録（控除額算出）  
- ![deduction](./images/sample_personal_image.ong)
+ ![deduction](./app/assets/images/sample_personal_image.ong)
 
 　カテゴリー選択  
 　商品表示画面（例）  
