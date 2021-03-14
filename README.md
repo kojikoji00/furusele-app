@@ -4,7 +4,7 @@ https://furusele-app.herokuapp.com/
 ## アプリ内容説明  
 　ふるさと納税支援アプリです。  
 　年収と家族構成、好きなカテゴリーを入力することでその人にあったふるさと納税商品を紹介します。  
-　選択した商品からリンクとなっているページから商品の購入が可能です。　　
+　選択した商品からリンクページから商品購入が可能です。　　
 　過去に選択した商品を一覧で確認することができます。　　
   
 ## ■使用技術  
@@ -23,13 +23,6 @@ annotate/aws-sdk-s3/better_errors/binding_of_caller/devise/faker/
 activerecord-import/nokogiri/gon/google-analytics-rails/byebug/  
 dotenv-rails/factory_bot_rails/pry-byebug/rails-erd/  
 rspec-rails/rubocop-rails/erb2haml/capybara  
-  
-  
-## ■キャラクターについて  
-  
-ココナラで外注しています。親しみやすいキャラクターにしました。  
-今回は「フタバ」さんに依頼しました。  
-  
   
 ## ■主な機能  
 ・ログイン機能  
@@ -56,12 +49,13 @@ rspec-rails/rubocop-rails/erb2haml/capybara
  ![deduction](app/assets/images/sample_personal_image.png)
 
 　カテゴリー選択  
+  ![deduction](app/assets/images/category_select.png)
 　商品表示画面（例）  
   
 ・スクレイピングによる商品情報表示（nokogiriを利用。さとふるから情報取得）  
 　上：魚介・海産物、米・パンで検索  
 　下：果物・米・パンで検索  
-   
+   ![deduction](app/assets/images/sample-mypage.png)
 ## ■アプリの改善項目  
 ### ＜機能面＞  
 　Githubのissueにて管理をしているので、適宜更新していきます。  
