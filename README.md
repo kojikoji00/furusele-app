@@ -7,6 +7,9 @@
 　年収と家族構成、好きなカテゴリーを入力することでその人にあったふるさと納税商品を紹介します。  
 　選択した商品のリンクから商品を購入することができます。  
 　マイページから過去に選択した商品を一覧で確認することもできます。　　
+   
+ TOPページ  
+ 
   
 ## ■使用技術  
 ▼フロントエンド  
@@ -34,7 +37,7 @@ rspec-rails/rubocop-rails/erb2haml/capybara
 ・過去の選択した商品をマイページから確認できる。  
 ・お問い合わせページ  
 ・プライバシーポリシー・利用規約  
-   
+ ![deduction](app/assets/images/toppage-sample.png)  
   
 ## ■アプリの作成について  
 ### ＜作成方針＞  
@@ -51,11 +54,11 @@ rspec-rails/rubocop-rails/erb2haml/capybara
   
   
 ### ▼カテゴリー選択  
-  ![deduction](app/assets/images/category_select.png)
+  ![category](app/assets/images/category_select.png)
   
   
 ### ▼スクレイピングによる商品情報表示（nokogiriを利用。さとふるから情報取得）  
-  ![deduction](app/assets/images/sample-mypage.png)
+  ![mypage](app/assets/images/sample-mypage.png)
   
   
   
