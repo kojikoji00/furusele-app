@@ -9,7 +9,7 @@
 　マイページから過去に選択した商品を一覧で確認することもできます。　　
    
  TOPページ  
- 
+  ![toppage](app/assets/images/top-page-image.png)  
   
 ## ■使用技術  
 ▼フロントエンド  
@@ -37,7 +37,6 @@ rspec-rails/rubocop-rails/erb2haml/capybara
 ・過去の選択した商品をマイページから確認できる。  
 ・お問い合わせページ  
 ・プライバシーポリシー・利用規約  
- ![toppage](app/assets/images/top-page-image.png)  
   
 ## ■アプリの作成について  
 ### ＜作成方針＞  
